@@ -18,6 +18,10 @@ public class Level implements Drawable{
 		drawables.add(p);
 	}
 	
+	public ArrayList<Platform> getPlatforms() {
+		return platforms;
+	}
+	
 	@Override
 	public void draw(Vec2 cameraOffset) {
 		for (Drawable d : drawables) {
