@@ -79,14 +79,27 @@ public class Game {
 				playerPos.x < (plat.getPos().x + plat.getDim().x) 	&& 
 				(playerPos.y + playerSize) > plat.getPos().y 		&&
 				playerPos.y < (plat.getPos().y + plat.getDim().y)) {
+				float left   = (playerPos.x + playerSize - plat.getPos().x) / playerVel.x;
+				float right  = (playerPos.x - plat.getPos().x - plat.getDim().x) / playerVel.x;
+				float bottom = (playerPos.y + playerSize - plat.getPos().y) / playerVel.y;
+				float top    = (playerPos.y - plat.getPos().y - plat.getDim().y) / playerVel.y;
 				
-				if (playerVel.y < 0) {
-					playerPos.y = plat.getPos().y + plat.getDim().y;
+				if (left > 0 && (left < right  || right  < 0) &&
+								(left < top    || top    < 0) &&
+								(left < bottom || bottom < 0)) {
+					playerVel.x = 0;
+					playerPos.x = plat.getPos().x - playerSize;
+				} else if (right > 0 && (right < top    || top < 0) &&
+										(right < bottom || bottom < 0)) {
+					playerVel.x = 0;
+					playerPos.x = plat.getPos().x + plat.getDim().x;
+				} else if (top > 0 && (top < bottom || bottom < 0)) {
 					playerVel.y = 0;
+					playerPos.y = plat.getPos().y + plat.getDim().y;
 					onPlatform = true;
-				} else if (playerVel.y > 0) {
+				} else {
+					playerVel.y = 0;
 					playerPos.y = plat.getPos().y - playerSize;
-					playerVel.y = -playerVel.y;
 				}
 			}
 		}
