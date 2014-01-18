@@ -29,7 +29,7 @@ public class LevelLoader {
 				Element rectangle = (Element) listOfRectangles.item(i);
 				
 				float width = Float.parseFloat(rectangle.getAttribute("width"));
-				float height = Float.parseFloat(rectangle.getAttribute("width"));
+				float height = Float.parseFloat(rectangle.getAttribute("height"));
 				Vec2 dim = new Vec2(width, height);
 				float x = Float.parseFloat(rectangle.getAttribute("x"));
 				float y = Float.parseFloat(rectangle.getAttribute("y"));
