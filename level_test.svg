@@ -26,7 +26,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
      inkscape:cx="375"
-     inkscape:cy="777.14286"
+     inkscape:cy="462.85715"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -54,30 +54,65 @@
     <rect
        style="fill:#ff0000"
        id="rect2985"
-       width="468.57144"
-       height="194.28572"
-       x="120"
-       y="226.6479" />
+       width="89.285728"
+       height="317.14288"
+       x="-30.714287"
+       y="495.93362" />
     <rect
        style="fill:#ff0000"
        id="rect2987"
-       width="408.57144"
-       height="180"
-       x="248.57143"
-       y="520.93359" />
+       width="132.85716"
+       height="306.42856"
+       x="659.28571"
+       y="471.64792" />
     <rect
        style="fill:#ff0000"
        id="rect2989"
-       width="188.57143"
+       width="716.42853"
        height="120"
-       x="111.42857"
+       x="17.857145"
        y="755.2193" />
     <rect
        style="fill:#ff00ff"
        id="rect3362"
-       width="41.428585"
-       height="43.571434"
-       x="328.57144"
-       y="146.6479" />
+       width="33.571442"
+       height="35.000004"
+       x="155.00002"
+       y="594.505" />
+    <rect
+       style="fill:#ff0000;stroke:none"
+       id="rect6149"
+       width="68.571426"
+       height="50.714287"
+       x="354.28571"
+       y="667.36218" />
+    <rect
+       style="fill:#ff0000;stroke:none"
+       id="rect6151"
+       width="90.714287"
+       height="67.85714"
+       x="470"
+       y="588.07648" />
+    <rect
+       style="fill:#ff0000;stroke:none"
+       id="rect6153"
+       width="65.714287"
+       height="41.42857"
+       x="521.42859"
+       y="492.36218" />
+    <rect
+       style="fill:#ff0000;stroke:none"
+       id="rect6155"
+       width="92.85714"
+       height="52.142857"
+       x="248.57143"
+       y="370.21933" />
+    <rect
+       style="fill:#ff0000;stroke:none"
+       id="rect6157"
+       width="112.14286"
+       height="99.285713"
+       x="35"
+       y="410.21933" />
   </g>
 </svg>
