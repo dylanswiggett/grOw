@@ -7,5 +7,5 @@ public interface Drawable {
 	 * Passes in the amount the camera has moved from the origin, so that all
 	 * objects can be moved accordingly.;
 	 */
-	public void draw(Vec2 cameraOffset);
+	public void draw();
 }

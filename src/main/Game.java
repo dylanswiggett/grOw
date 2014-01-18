@@ -3,6 +3,7 @@ package main;
 import java.io.IOException;
 
 import org.lwjgl.input.Keyboard;
+import org.lwjgl.opengl.GL11;
 
 import svg.LevelLoader;
 
@@ -34,7 +35,7 @@ public class Game {
 		
 		playerPos = new Vec2(300, 1000);
 		playerVel = new Vec2(0, 0);
-		playerSize = 20;
+		playerSize = 40;
 		playerSprite = new ColorRect(playerPos, new Vec2(playerSize, playerSize), .8f, .8f, 1);
 		
 		try {
@@ -106,13 +107,21 @@ public class Game {
 	}
 	
 	public void draw() {
-		Vec2 cameraOffset = playerPos.add(
-				new Vec2(playerSize / 2 - w / 2, playerSize / 2 - h / 2));
+		
+		GL11.glPushMatrix();
+		
+		float scale = 20 / playerSize;
+		
+		GL11.glTranslatef(-playerPos.x * scale + w / 2,
+						  -playerPos.y * scale + h / 2, 0);
+		GL11.glScalef(scale, scale, 0);
 		
 		playerSprite.setDrawPos(playerPos);
 		playerSprite.setDrawDim(new Vec2(playerSize, playerSize));
-		playerSprite.draw(cameraOffset);
+		playerSprite.draw();
 		
-		curLvl.draw(cameraOffset);
+		curLvl.draw();
+		
+		GL11.glPopMatrix();
 	}
 }

@@ -20,9 +20,9 @@ public class Platform implements Drawable {
 		return dim;
 	}
 	
-	public void draw(Vec2 cameraOffset) {
+	public void draw() {
 		rect.setDrawPos(pos);
 		rect.setDrawDim(dim);
-		rect.draw(cameraOffset);
+		rect.draw();
 	}
 }

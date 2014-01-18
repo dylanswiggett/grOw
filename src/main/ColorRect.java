@@ -31,17 +31,22 @@ public class ColorRect implements Drawable {
 	}
 	
 	@Override
-	public void draw(Vec2 cameraOffset) {
+	public void draw() {
 		GL11.glColor3f(r, g, b);
-		Vec2 screenPos1 = colorRectPos.subtract(cameraOffset);
-		Vec2 screenPos2 = screenPos1.add(colorRectDim);
+		
+		GL11.glPushMatrix();
+		GL11.glTranslatef(colorRectPos.x, colorRectPos.y, 0);
+		GL11.glScalef(colorRectDim.x, colorRectDim.y, 0);
+		
 		GL11.glBegin(GL11.GL_QUADS);
 		{
-			GL11.glVertex2f(screenPos1.x, screenPos1.y);
-			GL11.glVertex2f(screenPos2.x, screenPos1.y);
-			GL11.glVertex2f(screenPos2.x, screenPos2.y);
-			GL11.glVertex2f(screenPos1.x, screenPos2.y);
+			GL11.glVertex2f(0, 0);
+			GL11.glVertex2f(1, 0);
+			GL11.glVertex2f(1, 1);
+			GL11.glVertex2f(0, 1);
 		}
 		GL11.glEnd();
+		
+		GL11.glPopMatrix();
 	}
 }

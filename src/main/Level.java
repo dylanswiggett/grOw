@@ -23,9 +23,9 @@ public class Level implements Drawable{
 	}
 	
 	@Override
-	public void draw(Vec2 cameraOffset) {
+	public void draw() {
 		for (Drawable d : drawables) {
-			d.draw(cameraOffset);
+			d.draw();
 		}
 	}
 
