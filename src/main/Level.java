@@ -8,6 +8,9 @@ public class Level implements Drawable{
 	
 	private ArrayList<Platform> platforms;
 	
+	private Vec2 playerInitialPosition;
+	private Vec2 playerInitialDimensions;
+	
 	public Level() {
 		drawables = new ArrayList<Drawable>();
 		platforms = new ArrayList<Platform>();
@@ -20,6 +23,22 @@ public class Level implements Drawable{
 	
 	public ArrayList<Platform> getPlatforms() {
 		return platforms;
+	}
+	
+	public Vec2 getPlayerInitialPosition() {
+		return playerInitialPosition;
+	}
+	
+	public void setPlayerInitialPosition(Vec2 playerInitialPosition) {
+		this.playerInitialPosition = playerInitialPosition;
+	}
+	
+	public Vec2 getPlayerInitialDimensions() {
+		return playerInitialDimensions;
+	}
+	
+	public void setPlayerInitialDimensions(Vec2 playerInitialDimensions) {
+		this.playerInitialDimensions = playerInitialDimensions;
 	}
 	
 	@Override
