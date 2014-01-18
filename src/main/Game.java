@@ -32,10 +32,6 @@ public class Game {
 		this.w = w;
 		this.h = h;
 		
-		
-		playerPos = new Vec2(300, 1000);
-		playerVel = new Vec2(0, 0);
-		playerSize = 40;
 		playerSprite = new ColorRect(playerPos, new Vec2(playerSize, playerSize), .8f, .8f, 1);
 		
 		try {
@@ -45,6 +41,11 @@ public class Game {
 			e.printStackTrace();
 			System.exit(1);
 		}
+		
+		playerPos = curLvl.getPlayerInitialPosition();
+		playerVel = new Vec2(0, 0);
+		playerSize = curLvl.getPlayerInitialDimensions().y;
+		System.out.println(playerPos.x);
 	}
 	
 	public void step() {
