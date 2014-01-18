@@ -32,7 +32,9 @@ public class LevelLoader {
 				float height = Float.parseFloat(rectangle.getAttribute("height"));
 				Vec2 dim = new Vec2(width, height);
 				float x = Float.parseFloat(rectangle.getAttribute("x"));
-				float y = -1f * Float.parseFloat(rectangle.getAttribute("y"));
+				float y = Float.parseFloat(rectangle.getAttribute("y"));
+				// Adjust coordinates to "flip" the level.
+				y = -1f * y - height;
 				Vec2 pos = new Vec2(x, y);
 
 				String style = rectangle.getAttribute("style");
