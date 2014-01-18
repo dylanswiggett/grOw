@@ -32,6 +32,12 @@ public class Init {
 		GL11.glMatrixMode(GL11.GL_MODELVIEW);
 		
 		while (! Display.isCloseRequested() && !Keyboard.isKeyDown(Keyboard.KEY_Q)) {
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
 			GL11.glClear(GL11.GL_COLOR_BUFFER_BIT | GL11.GL_DEPTH_BUFFER_BIT);
 			
 			game.step();
