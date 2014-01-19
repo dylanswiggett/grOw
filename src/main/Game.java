@@ -28,6 +28,8 @@ public class Game {
 	
 	private static TexturedRect background;
 	private static Shader bgShader = new Shader("assets/shaders/basic.vert", "assets/shaders/background.frag");
+	private static float bgColor = .1f;
+	private static float bgVel = 0f;
 	
 	private int w, h;
 	
@@ -222,7 +224,15 @@ public class Game {
 	public void draw() {
 		bgShader.enable();
 		bgShader.Uniform1f("time", counter++);
-		counter %= 1000;
+		bgShader.Uniform1f("bgColor", bgColor);
+		if (bgColor < 0)
+			bgVel += .0003;
+		else if (bgColor > .15)
+			bgVel -= .0003;
+		else bgVel += (Math.random() - .5) * .0003;
+		bgVel *= .95;
+		bgColor += bgVel;
+		counter = (int) (1000 * Math.random());
 		background.draw();
 		bgShader.disable();
 		
