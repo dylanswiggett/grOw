@@ -95,7 +95,7 @@ public class Game {
 				playerGrowthSpeed += .01;
 			playerSize += playerGrowthSpeed;
 			// TODO: Scale whooshing sound relative to playerGrowthSpeed.
-			//Sound.WHOOSH.playAsSoundEffect(1.0f, 0.5f * playerGrowthSpeed, true);
+			Sound.setVolume(Sound.WHOOSH, playerGrowthSpeed);
 		}
 		
 		// Gravity

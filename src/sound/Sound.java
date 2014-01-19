@@ -1,7 +1,6 @@
 package sound;
 
 import java.io.BufferedInputStream;
-import java.io.IOException;
 import java.nio.FloatBuffer;
 
 import org.lwjgl.BufferUtils;
@@ -117,6 +116,10 @@ public class Sound {
 	
 	public static void stop(int sound) {
 		AL10.alSourceStop(sound);
+	}
+	
+	public static void setVolume(int sound, float gain) {
+		AL10.alSourcef(sound, AL10.AL_GAIN, gain);
 	}
 	
 }
