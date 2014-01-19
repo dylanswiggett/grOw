@@ -14,6 +14,10 @@ public class Coin implements Drawable{
 		this.value = value;
 	}
 	
+	public float getValue() {
+		return value;
+	}
+	
 	public Vec2 getPos() {
 		return pos;
 	}

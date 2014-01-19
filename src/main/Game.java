@@ -90,6 +90,7 @@ public class Game {
 				playerPos.y < (c.getPos().y + c.getDim().y)) {
 				System.out.println("COIN GET");
 				curLvl.removeCoin(c);
+				playerSize += c.getValue();
 			}
 		}
 		
