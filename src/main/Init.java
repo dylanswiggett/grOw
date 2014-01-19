@@ -38,6 +38,7 @@ public class Init {
 		GL11.glOrtho(0, WIDTH, 0, HEIGHT, -1, 1);
 		GL11.glMatrixMode(GL11.GL_MODELVIEW);
 		GL11.glEnable(GL11.GL_BLEND);
+		GL11.glEnable(GL11.GL_TEXTURE_2D);
 		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 		
 		while (! Display.isCloseRequested() && !Keyboard.isKeyDown(Keyboard.KEY_Q)) {

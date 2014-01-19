@@ -52,10 +52,8 @@ public class Fonts {
 		GL11.glPushMatrix();
 		GL11.glTranslatef(pos.x, pos.y, 0);
 		GL11.glScalef(1, -1, 1);
-		GL11.glEnable(GL11.GL_TEXTURE_2D);
 		Fonts.getFont(font, size).drawString(
 				0, 0, "TESTING", Color.yellow);
-		GL11.glDisable(GL11.GL_TEXTURE_2D);
 		GL11.glPopMatrix();
 	}
 }

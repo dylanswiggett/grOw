@@ -3,6 +3,9 @@ package main;
 import org.lwjgl.opengl.GL11;
 
 public class ColorRect implements Drawable {
+	
+	private static final TexturedRect rec =
+			new TexturedRect(new Vec2(0, 0), new Vec2(0, 0), "assets/textures/whitePixel.png", 1, 1, 1);
 
 	// Position and dimension (dimension must be positive)
 	private Vec2 colorRectPos, colorRectDim;
@@ -32,21 +35,9 @@ public class ColorRect implements Drawable {
 	
 	@Override
 	public void draw() {
-		GL11.glColor3f(r, g, b);
-		
-		GL11.glPushMatrix();
-		GL11.glTranslatef(colorRectPos.x, colorRectPos.y, 0);
-		GL11.glScalef(colorRectDim.x, colorRectDim.y, 0);
-		
-		GL11.glBegin(GL11.GL_QUADS);
-		{
-			GL11.glVertex2f(0, 0);
-			GL11.glVertex2f(1, 0);
-			GL11.glVertex2f(1, 1);
-			GL11.glVertex2f(0, 1);
-		}
-		GL11.glEnd();
-		
-		GL11.glPopMatrix();
+		rec.setPos(colorRectPos);
+		rec.setDim(colorRectDim);
+		rec.setColor(r, g, b);
+		rec.draw();
 	}
 }
