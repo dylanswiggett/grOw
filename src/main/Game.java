@@ -181,7 +181,7 @@ public class Game {
 		playerSprite.setDrawDim(new Vec2(playerSize, playerSize));
 		playerSprite.draw();
 		
-		Fonts.draw(Fonts.ABSENDER, 70, new Vec2(playerPos.x, -playerPos.y), "TEST TEST TEST", Color.yellow);
+		Fonts.draw(Fonts.ABSENDER, 70, playerPos, "TEST TEST TEST", Color.yellow);
 		GL11.glPopMatrix();
 	}
 }
