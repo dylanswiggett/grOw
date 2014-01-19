@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.9195959"
-     inkscape:cx="176.30422"
-     inkscape:cy="469.64313"
+     inkscape:zoom="22.4"
+     inkscape:cx="209.55409"
+     inkscape:cy="470.53574"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -165,15 +165,168 @@
        y="553.47302" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="114.65232"
-       y="586.93445"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="130.81477"
+       y="584.28284"
        id="text3313"
        sodipodi:linespacing="126%"><tspan
          sodipodi:role="line"
          id="tspan3315"
-         x="114.65232"
-         y="586.93445"
-         style="font-size:8px;font-weight:normal;-inkscape-font-specification:Sans">Level</tspan></text>
+         x="130.81477"
+         y="584.28284"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || ROOM 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="134.11499"
+       y="586.51025"
+       id="text3313-8"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-9"
+         x="134.11499"
+         y="586.51025"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 10 || Enter at your peril</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="157.95427"
+       y="583.96564"
+       id="text3313-6"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8"
+         x="157.95427"
+         y="583.96564"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || BEWARE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="181.78571"
+       y="588.0318"
+       id="text3368"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3370"></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="181.21321"
+       y="590.65314"
+       id="text3313-0"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-4"
+         x="181.21321"
+         y="590.65314"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 10 || descend</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="181.24194"
+       y="588.64423"
+       id="text3313-0-2"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-4-9"
+         x="181.24194"
+         y="588.64423"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 10 || descend</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="181.24194"
+       y="592.64423"
+       id="text3313-0-5"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-4-4"
+         x="181.24194"
+         y="592.64423"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 10 || descend</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="181.24194"
+       y="594.64423"
+       id="text3313-0-9"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-4-7"
+         x="181.24194"
+         y="594.64423"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 10 || descend</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="181.24194"
+       y="596.64423"
+       id="text3313-0-28"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-4-99"
+         x="181.24194"
+         y="596.64423"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 10 || descend</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="181.24194"
+       y="598.64423"
+       id="text3313-0-6"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-4-8"
+         x="181.24194"
+         y="598.64423"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 10 || descend</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="181.24194"
+       y="586.64423"
+       id="text3313-0-66"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-4-49"
+         x="181.24194"
+         y="586.64423"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 10 || descend</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="153.38818"
+       y="586.55493"
+       id="text3313-6-6"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0"
+         x="153.38818"
+         y="586.55493"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 20 || 20 || What's going on???</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="221.27396"
+       y="588.78705"
+       id="text3313-6-6-2"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-1"
+         x="221.27396"
+         y="588.78705"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 10 || 10 || And what is that???</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="220.47038"
+       y="575.21558"
+       id="text3313-6-6-3"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-7"
+         x="220.47038"
+         y="575.21558"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 10 || 10 || Uhhhh....</tspan></text>
   </g>
 </svg>

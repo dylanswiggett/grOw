@@ -44,6 +44,10 @@ public class Game {
 	
 	private int counter = 1;
 	
+	// If the player is saying something, it will be said for this many more frames.
+	private int sayCounter;
+	private String saying;
+	
 	public Game(int w, int h) {
 		this.w = w;
 		this.h = h;
@@ -134,6 +138,22 @@ public class Game {
 			}
 		}
 		
+
+		ArrayList<SayBubble> bubbles = curLvl.getBubbles();
+		
+		for (int i = 0; i < bubbles.size(); i++) {
+			SayBubble b = bubbles.get(i);
+			System.out.println("CHECK" + playerPos.subtract(b.getPos()).norm());
+			if ((playerPos.x + playerSize) > b.getPos().x 		&&
+				playerPos.x < (b.getPos().x + b.getDim().x) 	&& 
+				(playerPos.y + playerSize) > b.getPos().y 		&&
+				playerPos.y < (b.getPos().y + b.getDim().y)) {
+				curLvl.removeBubble(b);
+				saying = b.getMessage();
+				sayCounter = b.getDur();
+			}
+		}
+		
 		/*
 		 * Handle collisions with platforms
 		 */
@@ -206,9 +226,11 @@ public class Game {
 		
 		GL11.glTranslatef(-playerPos.x + w / 2,
 						  -playerPos.y + h / 2, 0);
-		new TextBubble(playerPos.add(new Vec2(playerSize * scale, playerSize * scale)),
-				"abcdefghijklmnopqrstuvxyz").draw();
-		
+		if (sayCounter > 0) {
+			new TextBubble(playerPos.add(new Vec2(playerSize * scale, playerSize * scale)),
+					saying).draw();
+			sayCounter--;
+		}
 		GL11.glPopMatrix();
 	}
 }

@@ -10,6 +10,7 @@ import org.xml.sax.SAXException;
 import main.Coin;
 import main.Level;
 import main.Platform;
+import main.SayBubble;
 import main.Text;
 import main.Vec2;
 
@@ -70,22 +71,36 @@ public class LevelLoader {
 				Element text = (Element) listOfTexts.item(i);
 				
 				String string = text.getElementsByTagName("tspan").item(0).getTextContent();
-				String style = text.getAttribute("style").split(";")[0];
-				// 10 is the length of "font-size:" and 2 is the length of "px"
-				style = style.substring(10, style.length() - 2);
-				float size = Float.parseFloat(style);
+//				String style = text.getAttribute("style").split(";")[0];
+//				// 10 is the length of "font-size:" and 2 is the length of "px"
+//				System.out.println(style);
+//				style = style.substring(10, style.length() - 2);
+//				float size = Float.parseFloat(style);
 				float x = Float.parseFloat(text.getAttribute("x"));
 				float y = Float.parseFloat(text.getAttribute("y"));
 				// Adjust coordinates to "flip" the level.
 //				y = -1f * y + size;
 				Vec2 pos = new Vec2(x, y);
 				
-				level.addText(new Text(string, pos, size));				
+				String[] data = string.split(" \\|\\| ");
+				
+				if (data[0].compareTo("text") == 0) {
+					int px = Integer.parseInt(data[1]);
+					level.addText(new Text(data[2], pos, px));
+				} else if (data[0].compareTo("say") == 0) {
+					int duration = Integer.parseInt(data[1]);
+					int width = Integer.parseInt(data[2]);
+					int height = Integer.parseInt(data[3]);
+					Vec2 dim = new Vec2(width, height);
+					System.out.println(pos);
+					pos = new Vec2(pos.x, -pos.y);
+					level.addBubble(new SayBubble(pos.subtract(dim.mult(.5f)), dim, duration, data[4]));
+				}
+				
 				System.out.println("Text:");
 				System.out.println("\tstring: " + string);
 				System.out.println("\tx: " + x);
 				System.out.println("\ty: " + y);
-				System.out.println("\tsize: " + size);
 			}
 
 			return level;

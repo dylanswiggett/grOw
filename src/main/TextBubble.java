@@ -10,7 +10,7 @@ public class TextBubble implements Drawable{
 	
 	private static final Font FONT = Fonts.MONOFONTO;
 	private static final float WIDTH = 0.5f;
-	private static final int TEXT_DIM = 15;
+	private static final int TEXT_DIM = 16;
 	private static final int BUBBLE_DIM = 48;
 	private static final int FROM_SIDES = 15;
 	private static final int FROM_BOTTOM = 39;

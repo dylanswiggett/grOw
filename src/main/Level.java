@@ -8,6 +8,7 @@ public class Level implements Drawable{
 	
 	private ArrayList<Platform> platforms;
 	private ArrayList<Coin> coins;
+	private ArrayList<SayBubble> bubbles;
 	
 	private Vec2 playerInitialPosition;
 	private Vec2 playerInitialDimensions;
@@ -16,6 +17,7 @@ public class Level implements Drawable{
 		drawables = new ArrayList<Drawable>();
 		platforms = new ArrayList<Platform>();
 		coins = new ArrayList<Coin>();
+		bubbles = new ArrayList<SayBubble>();
 	}
 	
 	public void addPlatform(Platform p) {
@@ -37,12 +39,24 @@ public class Level implements Drawable{
 		drawables.add(text);
 	}
 	
+	public void addBubble(SayBubble b) {
+		bubbles.add(b);
+	}
+	
 	public ArrayList<Platform> getPlatforms() {
 		return platforms;
 	}
 	
 	public ArrayList<Coin> getCoins() {
 		return coins;
+	}
+	
+	public ArrayList<SayBubble> getBubbles() {
+		return bubbles;
+	}
+	
+	public void removeBubble(SayBubble b) {
+		bubbles.remove(b);
 	}
 	
 	public Vec2 getPlayerInitialPosition() {
