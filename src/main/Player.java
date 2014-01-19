@@ -24,8 +24,8 @@ public class Player extends TexturedRect {
 						ResourceLoader.getResourceAsStream("assets/textures/playerWalk" + i + ".png"));
 				textures[0].bind();
 				GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MIN_FILTER,
-		                 GL11.GL_NEAREST );
-				GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST );
+		                 GL11.GL_NONE );
+				GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NONE );
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
