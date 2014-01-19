@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.4"
-     inkscape:cx="214.91123"
-     inkscape:cy="459.82145"
+     inkscape:zoom="5.6"
+     inkscape:cx="-22.474281"
+     inkscape:cy="472.88634"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -54,9 +54,9 @@
     <rect
        style="fill:#ff0000"
        id="rect3222"
-       width="70.584412"
+       width="128.26299"
        height="30.052038"
-       x="110.10663"
+       x="52.428059"
        y="587.94452" />
     <rect
        style="fill:#ff0000"
@@ -66,23 +66,16 @@
        x="180.56477"
        y="600.82397" />
     <rect
-       style="fill:#ff00ff"
-       id="rect3226"
-       width="1.5152289"
-       height="1.3889598"
-       x="122.73354"
-       y="584.409" />
-    <rect
        style="fill:#ff0000"
        id="rect3228"
-       width="24.369917"
-       height="2.3991573"
-       x="167.43279"
-       y="573.54987" />
+       width="58.075275"
+       height="6.5063004"
+       x="133.72742"
+       y="575.60345" />
     <rect
        style="fill:#ff0000"
        id="rect3230"
-       width="56.947357"
+       width="84.268784"
        height="3.4092741"
        x="159.35156"
        y="561.42804" />
@@ -90,7 +83,7 @@
        style="fill:#ff0000"
        id="rect3232"
        width="15.152293"
-       height="12.1218"
+       height="18.19323"
        x="180.69104"
        y="563.82715" />
     <rect
@@ -103,7 +96,7 @@
     <rect
        style="fill:#ff0000"
        id="rect3242"
-       width="19.824244"
+       width="27.949244"
        height="2.9041886"
        x="219.70818"
        y="576.45404" />
@@ -112,15 +105,15 @@
        id="rect3244"
        width="8.0812206"
        height="2.2728431"
-       x="207.33382"
-       y="584.15649" />
+       x="204.83382"
+       y="587.1922" />
     <rect
        style="fill:#ff0000"
        id="rect3246"
        width="6.6922607"
        height="1.6414979"
-       x="220.08699"
-       y="590.09113" />
+       x="219.55127"
+       y="591.07324" />
     <rect
        style="fill:#ff0000"
        id="rect3248"
@@ -142,61 +135,40 @@
        height="0.50507629"
        x="204.05081"
        y="597.79352" />
-    <rect
-       style="fill:#ffff00"
-       id="rect3256"
-       width="3.0304577"
-       height="3.409265"
-       x="222.8649"
-       y="582.89368" />
-    <rect
-       style="fill:#ffff00"
-       id="rect3258"
-       width="4.9244938"
-       height="4.4194174"
-       x="210.99562"
-       y="573.5498" />
-    <rect
-       style="fill:#ffff00"
-       id="rect3260"
-       width="10.85914"
-       height="12.500638"
-       x="228.79958"
-       y="553.47302" />
     <text
        xml:space="preserve"
        style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="130.81477"
-       y="584.28284"
+       x="62.124401"
+       y="584.5354"
        id="text3313"
        sodipodi:linespacing="126%"><tspan
          sodipodi:role="line"
          id="tspan3315"
-         x="130.81477"
-         y="584.28284"
+         x="62.124401"
+         y="584.5354"
          style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || ROOM 1</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="134.11499"
-       y="586.51025"
+       x="65.424614"
+       y="586.76282"
        id="text3313-8"
        sodipodi:linespacing="126%"><tspan
          sodipodi:role="line"
          id="tspan3315-9"
-         x="134.11499"
-         y="586.51025"
+         x="65.424614"
+         y="586.76282"
          style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 10 || Enter at your peril</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="157.95427"
+       x="95.45108"
        y="583.96564"
        id="text3313-6"
        sodipodi:linespacing="126%"><tspan
          sodipodi:role="line"
          id="tspan3315-8"
-         x="157.95427"
+         x="95.45108"
          y="583.96564"
          style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || BEWARE</tspan></text>
     <text
@@ -295,39 +267,15 @@
     <text
        xml:space="preserve"
        style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="153.38818"
-       y="586.55493"
+       x="74.78569"
+       y="586.68121"
        id="text3313-6-6"
        sodipodi:linespacing="126%"><tspan
          sodipodi:role="line"
          id="tspan3315-8-0"
-         x="153.38818"
-         y="586.55493"
-         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 20 || 20 || What's going on???</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="221.27396"
-       y="588.78705"
-       id="text3313-6-6-2"
-       sodipodi:linespacing="126%"><tspan
-         sodipodi:role="line"
-         id="tspan3315-8-0-1"
-         x="221.27396"
-         y="588.78705"
-         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 10 || 10 || Is that a coin???</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="220.47038"
-       y="575.21558"
-       id="text3313-6-6-3"
-       sodipodi:linespacing="126%"><tspan
-         sodipodi:role="line"
-         id="tspan3315-8-0-7"
-         x="220.47038"
-         y="575.21558"
-         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 10 || 10 || Uhhhh....</tspan></text>
+         x="74.78569"
+         y="586.68121"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 20 || 20 || Weird...</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -364,5 +312,190 @@
          x="214.81676"
          y="598.29596"
          style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 15 || hope</tspan></text>
+    <rect
+       style="fill:#ff0000"
+       id="rect3657"
+       width="77.676796"
+       height="62.82655"
+       x="-24.819626"
+       y="554.89282" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3659"
+       width="5.7142859"
+       height="61.25"
+       x="121.60714"
+       y="522.54077" />
+    <rect
+       style="fill:#ff00ff"
+       id="rect3226"
+       width="1.5152289"
+       height="1.3889598"
+       x="27.412031"
+       y="552.06946" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="98.328773"
+       y="586.43011"
+       id="text3313-6-6-5"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4"
+         x="98.328773"
+         y="586.43011"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 20 || 20 || I don't remember these signs</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="48.849255"
+       y="553.80042"
+       id="text3313-6-6-24"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-14"
+         x="48.849255"
+         y="553.80042"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 20 || 20 || I can see the facility below...</tspan></text>
+    <rect
+       style="fill:#ff0000"
+       id="rect3709"
+       width="6.7553949"
+       height="26.453369"
+       x="10.480332"
+       y="528.91376" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="17.719482"
+       y="545.70667"
+       id="text3313-6-6-4"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-2"
+         x="17.719482"
+         y="545.70667"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 10 || 10 || No way. I can't go back.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="132.90376"
+       y="585.97455"
+       id="text3313-6-6-5-3"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-0"
+         x="132.90376"
+         y="585.97455"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 20 || 20 || There's something above me...</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="155.89484"
+       y="586.68884"
+       id="text3313-6-6-5-1"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2"
+         x="155.89484"
+         y="586.68884"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 20 || 20 || If only I had a ladder...</tspan></text>
+    <rect
+       style="fill:#ff0000"
+       id="rect3750"
+       width="8.4821424"
+       height="26.607143"
+       x="239.28572"
+       y="577.36218" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3756"
+       width="2.4107144"
+       height="1.25"
+       x="205.98213"
+       y="583.255" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3758"
+       width="1.7857143"
+       height="1.3392857"
+       x="213.66071"
+       y="580.13" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="218.62337"
+       y="589.76923"
+       id="text3313-6-6-5-1-4"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2-3"
+         x="218.62337"
+         y="589.76923"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 5 || 5 || What's with this place?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="220.14122"
+       y="575.48352"
+       id="text3313-6-6-5-1-0"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2-2"
+         x="220.14122"
+         y="575.48352"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 5 || 5 || It's all so different</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="240.58763"
+       y="559.94775"
+       id="text3313-6-6-5-1-9"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2-0"
+         x="240.58763"
+         y="559.94775"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || EXIT</tspan></text>
+    <rect
+       style="fill:#ff0000"
+       id="rect3799"
+       width="6.875"
+       height="45.892857"
+       x="245.89285"
+       y="572.80865" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3799-8"
+       width="6.875"
+       height="44.375"
+       x="252.09822"
+       y="570.17462" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3819"
+       width="2.1928365"
+       height="3.5714285"
+       x="240"
+       y="564.5943" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3821"
+       width="8.0357141"
+       height="2.2321255"
+       x="240"
+       y="566.73718" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="244.16016"
+       y="561.82275"
+       id="text3313-6-6-5-1-0-1"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2-2-4"
+         x="244.16016"
+         y="561.82275"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 5 || 5 || Out of reach...</tspan></text>
   </g>
 </svg>

@@ -147,7 +147,6 @@ public class Game {
 		
 		for (int i = 0; i < bubbles.size(); i++) {
 			SayBubble b = bubbles.get(i);
-			System.out.println("CHECK" + playerPos.subtract(b.getPos()).norm());
 			if ((playerPos.x + playerSize) > b.getPos().x 		&&
 				playerPos.x < (b.getPos().x + b.getDim().x) 	&& 
 				(playerPos.y + playerSize) > b.getPos().y 		&&
