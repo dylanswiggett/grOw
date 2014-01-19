@@ -87,17 +87,27 @@ public class Game {
 		
 		if (Keyboard.isKeyDown(Keyboard.KEY_LEFT) && !Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) {
 			playerVel = playerVel.add(new Vec2(-MOVE_SPEED * playerSize, 0));
-			playerSprite.step();
-			playerSprite.setMovingRight(false);
+			playerSprite.setFacingRight(false);
 		} else if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT) && !Keyboard.isKeyDown(Keyboard.KEY_LEFT)) {
 			playerVel = playerVel.add(new Vec2(MOVE_SPEED * playerSize, 0));
-			playerSprite.step();
-			playerSprite.setMovingRight(true);
-		} else {
-			playerSprite.standStill();
+			playerSprite.setFacingRight(true);
 		}
 		if (Keyboard.isKeyDown(Keyboard.KEY_F)) {
 			playerVel.y = playerSize / 2;
+		}
+		
+		// Animation
+		
+		if (playerVel.y < -0.01 * playerSize) {
+			playerSprite.setAnimation(Player.Animation.FALLING);
+		} else {
+			playerSprite.setAnimation(Player.Animation.WALKING);
+		}
+		
+		playerSprite.step();
+		
+		if (playerSprite.getAnimation() == Player.Animation.WALKING && !(Keyboard.isKeyDown(Keyboard.KEY_LEFT) ^ Keyboard.isKeyDown(Keyboard.KEY_RIGHT))) {
+			playerSprite.standStill();
 		}
 		
 		// Growing
