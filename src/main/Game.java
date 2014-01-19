@@ -67,7 +67,7 @@ public class Game {
 		if (onPlatform && (jumpTimeout == 1) && Keyboard.isKeyDown(Keyboard.KEY_SPACE)) {
 			playerVel = playerVel.add(JUMP.mult(playerSize));
 			jumpTimeout = JUMP_TIMEOUT;
-			Sound.JUMP.playAsSoundEffect(1f, 1f, false);
+			Sound.play(Sound.JUMP);
 		}
 		if (jumpTimeout > 1)
 			jumpTimeout--;
@@ -88,7 +88,7 @@ public class Game {
 			playerSize = goalPlayerSize;
 			playerGrowthSpeed = 0;
 			// TODO: Stop whooshing sound
-			Sound.WHOOSH.stop();
+			Sound.stop(Sound.WHOOSH);
 		} else if (playerSize < goalPlayerSize) {
 			if (playerSize > (originalPlayerSize + goalPlayerSize) / 2 && playerGrowthSpeed > GROWTH_RATE)
 				playerGrowthSpeed -= GROWTH_RATE;
@@ -96,7 +96,7 @@ public class Game {
 				playerGrowthSpeed += GROWTH_RATE;
 			playerSize += playerGrowthSpeed;
 			// TODO: Scale whooshing sound relative to playerGrowthSpeed.
-			Sound.WHOOSH.playAsSoundEffect(1.0f, 0.5f * playerGrowthSpeed, true);
+			//Sound.WHOOSH.playAsSoundEffect(1.0f, 0.5f * playerGrowthSpeed, true);
 		}
 		
 		// Gravity
@@ -121,7 +121,7 @@ public class Game {
 				originalPlayerSize = playerSize;
 				playerGrowthSpeed = GROWTH_RATE;
 				// TODO: Start whooshing sound
-				Sound.WHOOSH.playAsSoundEffect(1.0f, 1.0f, true);
+				Sound.play(Sound.WHOOSH);
 			}
 		}
 		
@@ -160,12 +160,12 @@ public class Game {
 					playerPos.x = plat.getPos().x + plat.getDim().x * 1.01f;
 				} else if (top > 0 && (top < bottom || bottom < 0)) {
 					if (playerVel.y < 2 * GRAVITY.y * playerSize)
-						Sound.LAND.playAsSoundEffect(1f, 1f, false);
+						Sound.play(Sound.LAND);
 					nextPlayerVel.y = 0;
 					playerPos.y = plat.getPos().y + plat.getDim().y;
 					onPlatform = true;
 				} else {
-					Sound.BUMP.playAsSoundEffect(1f, 1f, false);
+					Sound.play(Sound.BUMP);
 					nextPlayerVel.y = 0;
 					playerPos.y = plat.getPos().y - playerSize;
 				}
