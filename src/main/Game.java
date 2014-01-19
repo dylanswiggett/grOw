@@ -5,9 +5,11 @@ import java.util.ArrayList;
 
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
+import org.newdawn.slick.Color;
 
 import sound.Sound;
 import svg.LevelLoader;
+import text.Fonts;
 
 public class Game {
 	// All of these values are scaled by the player's current size.
@@ -23,6 +25,9 @@ public class Game {
 	
 	private Vec2 playerPos, playerVel;
 	private float playerSize;
+	private float playerGrowthSpeed = 0;
+	private float originalPlayerSize;
+	private float goalPlayerSize;
 	private ColorRect playerSprite;
 	
 	private Level curLvl;
@@ -47,6 +52,7 @@ public class Game {
 		playerPos = curLvl.getPlayerInitialPosition();
 		playerVel = new Vec2(0, 0);
 		playerSize = curLvl.getPlayerInitialDimensions().y;
+		goalPlayerSize = playerSize;
 		System.out.println(playerPos.x);
 	}
 	
@@ -72,6 +78,19 @@ public class Game {
 			playerVel.y = playerSize / 2;
 		}
 		
+		// Growing
+		
+		if (playerSize > goalPlayerSize) {
+			playerSize = goalPlayerSize;
+			playerGrowthSpeed = 0;
+		} else if (playerSize < goalPlayerSize) {
+			if (playerSize > (originalPlayerSize + goalPlayerSize) / 2)
+				playerGrowthSpeed -= .01;
+			else
+				playerGrowthSpeed += .01;
+			playerSize += playerGrowthSpeed;
+		}
+		
 		// Gravity
 		playerVel = playerVel.add(GRAVITY.mult(playerSize));
 		playerVel.y *= VERT_DAMPING;
@@ -90,7 +109,9 @@ public class Game {
 				playerPos.y < (c.getPos().y + c.getDim().y)) {
 				System.out.println("COIN GET");
 				curLvl.removeCoin(c);
-				playerSize += c.getValue();
+				goalPlayerSize += c.getValue();
+				originalPlayerSize = playerSize;
+				playerGrowthSpeed = .1f;
 			}
 		}
 		
@@ -156,6 +177,11 @@ public class Game {
 		playerSprite.setDrawPos(playerPos);
 		playerSprite.setDrawDim(new Vec2(playerSize, playerSize));
 		playerSprite.draw();
+		
+		GL11.glEnable(GL11.GL_TEXTURE_2D);
+		Fonts.getFont(Fonts.ABSENDER, 1000).drawString(
+				playerPos.x, playerPos.y, "TEST TEST TEST", Color.yellow);
+		GL11.glDisable(GL11.GL_TEXTURE_2D);
 		
 		GL11.glPopMatrix();
 	}
