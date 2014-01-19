@@ -7,6 +7,7 @@ public class Level implements Drawable{
 	private ArrayList<Drawable> drawables;
 	
 	private ArrayList<Platform> platforms;
+	private ArrayList<Spike> spikes;
 	private ArrayList<Coin> coins;
 	private ArrayList<SayBubble> bubbles;
 	
@@ -16,6 +17,7 @@ public class Level implements Drawable{
 	public Level() {
 		drawables = new ArrayList<Drawable>();
 		platforms = new ArrayList<Platform>();
+		spikes = new ArrayList<Spike>();
 		coins = new ArrayList<Coin>();
 		bubbles = new ArrayList<SayBubble>();
 	}
@@ -23,6 +25,11 @@ public class Level implements Drawable{
 	public void addPlatform(Platform p) {
 		platforms.add(p);
 		drawables.add(p);
+	}
+	
+	public void addSpike(Spike spike) {
+		spikes.add(spike);
+		drawables.add(spike);
 	}
 	
 	public void addCoin(Coin c) {
