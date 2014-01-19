@@ -35,7 +35,7 @@ public class Game {
 	private float playerGrowthSpeed = 0;
 	private float originalPlayerSize;
 	private float goalPlayerSize;
-	private TexturedRect playerSprite;
+	private Player playerSprite;
 	
 	private Level curLvl;
 	
@@ -49,7 +49,7 @@ public class Game {
 		this.h = h;
 		
 		playerSprite = //new ColorRect(playerPos, new Vec2(playerSize, playerSize), .8f, .8f, 1);
-				new TexturedRect(playerPos, new Vec2(playerSize, playerSize), "assets/textures/player.png", 1, 1, 1);
+				new Player(playerPos, new Vec2(playerSize, playerSize));
 				
 		background =
 				new TexturedRect(new Vec2(0, 0), new Vec2(w, h), "assets/textures/background.png", 1, 1, 1);
@@ -81,11 +81,15 @@ public class Game {
 		if (jumpTimeout > 1)
 			jumpTimeout--;
 		
-		if (Keyboard.isKeyDown(Keyboard.KEY_LEFT)) {
+		if (Keyboard.isKeyDown(Keyboard.KEY_LEFT) && !Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) {
 			playerVel = playerVel.add(new Vec2(-MOVE_SPEED * playerSize, 0));
+			playerSprite.step();
+			playerSprite.setGoinRight(false);
 		}
-		if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) {
+		if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT) && !Keyboard.isKeyDown(Keyboard.KEY_LEFT)) {
 			playerVel = playerVel.add(new Vec2(MOVE_SPEED * playerSize, 0));
+			playerSprite.step();
+			playerSprite.setGoinRight(true);
 		}
 		if (Keyboard.isKeyDown(Keyboard.KEY_F)) {
 			playerVel.y = playerSize / 2;
