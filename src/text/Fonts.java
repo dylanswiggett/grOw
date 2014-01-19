@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 
-import main.Init;
 import main.Vec2;
 
 import org.lwjgl.opengl.GL11;
@@ -46,14 +45,26 @@ public class Fonts {
 		}
 		TrueTypeFont newFont = new TrueTypeFont(f.deriveFont(size), true);
 		sizes.put(size, newFont);
+		System.out.println("size: " + size);
 		return newFont;
+	}
+	
+	static TrueTypeFont hacky;
+	static {
+		try {
+			hacky = new TrueTypeFont(Font.createFont(Font.TRUETYPE_FONT, ResourceLoader.getResourceAsStream("assets/fonts/monofonto.ttf")).deriveFont(50), true);
+		} catch (FontFormatException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public static void draw(Font font, int size, Vec2 pos, String text, Color color) {
 		GL11.glPushMatrix();
 		GL11.glTranslatef(pos.x, pos.y, 0);
-		GL11.glScalef(1, -1, 1);
-		Fonts.getFont(font, size).drawString(0, 0, text, color);
+		GL11.glScalef(1f, -1f, 1);
+		getFont(font, size).drawString(0, 0, text, color);
 		GL11.glPopMatrix();
 	}
 }
