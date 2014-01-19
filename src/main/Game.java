@@ -231,6 +231,9 @@ public class Game {
 		}
 
 		playerVel = nextPlayerVel;
+		
+		// Keep streaming audio working.
+		Sound.poll();
 	}
 
 	public void draw() {
