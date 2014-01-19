@@ -101,4 +101,30 @@ public class TexturedRect implements Drawable{
 
 		GL11.glPopMatrix();
 	}
+	
+	public void drawWrapped() {
+		GL11.glEnable(GL11.GL_TEXTURE_2D);
+		new Color(r, g, b).bind();
+		texture.bind();
+
+		GL11.glPushMatrix();
+		GL11.glTranslatef(pos.x, pos.y, 0);
+		GL11.glScalef(dim.x, dim.y, 0);
+
+		GL11.glBegin(GL11.GL_QUADS);
+		{
+			GL11.glTexCoord2f(0, 0);
+			GL11.glVertex2f(0, 1);
+			GL11.glTexCoord2f(0, texture.getHeight());
+			GL11.glVertex2f(0, 0);
+			GL11.glTexCoord2f(texture.getHeight() * dim.x / dim.y, texture.getHeight());
+			GL11.glVertex2f(1, 0);
+			GL11.glTexCoord2f(texture.getHeight() * dim.x / dim.y, 0);
+			GL11.glVertex2f(1, 1);
+
+		}
+		GL11.glEnd();
+
+		GL11.glPopMatrix();
+	}
 }

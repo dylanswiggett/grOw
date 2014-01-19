@@ -13,7 +13,7 @@ public class Spike extends Platform {
 	public void draw() {
 		texture.setPos(getPos());
 		texture.setDim(getDim());
-		texture.draw();
+		texture.drawWrapped();
 	}
 	
 }
