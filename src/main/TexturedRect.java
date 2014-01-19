@@ -3,6 +3,7 @@ package main;
 import java.io.IOException;
 
 import org.lwjgl.opengl.GL11;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.opengl.Texture;
 import org.newdawn.slick.opengl.TextureLoader;
 import org.newdawn.slick.util.ResourceLoader;
@@ -23,9 +24,8 @@ public class TexturedRect implements Drawable{
 					ResourceLoader.getResourceAsStream(filePath));
 			texture.bind();
 			GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MIN_FILTER,
-	                 GL11.GL_LINEAR_MIPMAP_NEAREST );
-			// when texture area is large, bilinear filter the original
-			GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_LINEAR );
+	                 GL11.GL_NEAREST );
+			GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST );
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -54,8 +54,8 @@ public class TexturedRect implements Drawable{
 	}
 	
 	public void draw() {
-		GL11.glColor3f(r, g, b);
 		GL11.glEnable(GL11.GL_TEXTURE_2D);
+		new Color(r, g, b).bind();
 		texture.bind();
 		
 		GL11.glPushMatrix();
@@ -64,14 +64,14 @@ public class TexturedRect implements Drawable{
 		
 		GL11.glBegin(GL11.GL_QUADS);
 		{
+			GL11.glVertex2f(0, 1);
+			GL11.glTexCoord2f(0, 1);
 			GL11.glVertex2f(0, 0);
-			GL11.glTexCoord2f(0, 0);
+			GL11.glTexCoord2f(1, 1);
 			GL11.glVertex2f(1, 0);
 			GL11.glTexCoord2f(1, 0);
 			GL11.glVertex2f(1, 1);
-			GL11.glTexCoord2f(1, 1);
-			GL11.glVertex2f(0, 1);
-			GL11.glTexCoord2f(0, 1);
+			GL11.glTexCoord2f(0, 0);
 		}
 		GL11.glEnd();
 		

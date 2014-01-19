@@ -5,7 +5,7 @@ import org.lwjgl.opengl.GL11;
 public class ColorRect implements Drawable {
 	
 	private static final TexturedRect rec =
-			new TexturedRect(new Vec2(0, 0), new Vec2(0, 0), "assets/textures/whitePixel.png", 1, 1, 1);
+			new TexturedRect(new Vec2(0, 0), new Vec2(0, 0), "assets/textures/whitePixel.png", 1, 0, 0);
 
 	// Position and dimension (dimension must be positive)
 	private Vec2 colorRectPos, colorRectDim;

@@ -18,7 +18,7 @@ public class Game {
 	private static final float MOVE_SPEED = .1f;
 	private static final float VERT_DAMPING = .97f;
 	private static final float HORZ_DAMPING = .8f;
-	
+	private static final int VISIBLE_PLAYER_HEIGHT = 40;
 	private static final int JUMP_TIMEOUT = 30;
 	
 	private int w, h;
@@ -28,19 +28,22 @@ public class Game {
 	private float playerGrowthSpeed = 0;
 	private float originalPlayerSize;
 	private float goalPlayerSize;
-	private ColorRect playerSprite;
+	private TexturedRect playerSprite;
 	
 	private Level curLvl;
 	
 	private boolean onPlatform = false;
 	private int jumpTimeout = 1;
 	
+	private int counter = 1;
+	
 	public Game(int w, int h) {
 		this.w = w;
 		this.h = h;
 		
-		playerSprite = new ColorRect(playerPos, new Vec2(playerSize, playerSize), .8f, .8f, 1);
-		
+		playerSprite = //new ColorRect(playerPos, new Vec2(playerSize, playerSize), .8f, .8f, 1);
+				new TexturedRect(playerPos, new Vec2(playerSize, playerSize), "assets/textures/player.png", 1, 1, 1);
+				
 		try {
 			curLvl = LevelLoader.load("test2.svg");
 		} catch (IOException e) {
@@ -152,10 +155,13 @@ public class Game {
 					nextPlayerVel.x = 0;
 					playerPos.x = plat.getPos().x + plat.getDim().x + .5f;
 				} else if (top > 0 && (top < bottom || bottom < 0)) {
+					if (playerVel.y < 2 * GRAVITY.y * playerSize)
+						Sound.LAND.playAsSoundEffect(1f, 1f, false);
 					nextPlayerVel.y = 0;
 					playerPos.y = plat.getPos().y + plat.getDim().y;
 					onPlatform = true;
 				} else {
+					Sound.BUMP.playAsSoundEffect(1f, 1f, false);
 					nextPlayerVel.y = 0;
 					playerPos.y = plat.getPos().y - playerSize;
 				}
@@ -169,7 +175,7 @@ public class Game {
 		
 		GL11.glPushMatrix();
 		
-		float scale = 20 / playerSize;
+		float scale = VISIBLE_PLAYER_HEIGHT / playerSize;
 		
 		GL11.glTranslatef(-playerPos.x * scale + w / 2,
 						  -playerPos.y * scale + h / 2, 0);
@@ -177,9 +183,11 @@ public class Game {
 		
 		curLvl.draw();
 		
-		playerSprite.setDrawPos(playerPos);
-		playerSprite.setDrawDim(new Vec2(playerSize, playerSize));
+		playerSprite.setPos(playerPos);
+		playerSprite.setDim(new Vec2(playerSize, playerSize));
 		playerSprite.draw();
+		
+		new TextBubble(playerPos.add(new Vec2(playerSize, playerSize)), "TESTING TESTING" + counter++).draw();
 		
 		Fonts.draw(Fonts.ABSENDER, 70, new Vec2(playerPos.x, -playerPos.y), "TEST TEST TEST", Color.yellow);
 		GL11.glPopMatrix();

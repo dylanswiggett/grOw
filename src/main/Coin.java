@@ -1,8 +1,8 @@
 package main;
 
 public class Coin implements Drawable{
-	private static final ColorRect rect =
-			new ColorRect(new Vec2(0, 0), new Vec2(0, 0), 1, 1, 0);
+	private static final TexturedRect rect =
+			new TexturedRect(new Vec2(0, 0), new Vec2(0, 0), "assets/textures/coin.png", 1, 1, 1);
 	
 	private float value;
 	private Vec2 pos;
@@ -27,8 +27,8 @@ public class Coin implements Drawable{
 	}
 	
 	public void draw() {
-		rect.setDrawPos(pos);
-		rect.setDrawDim(dim);
+		rect.setPos(pos);
+		rect.setDim(dim);
 		rect.draw();
 	}
 }
