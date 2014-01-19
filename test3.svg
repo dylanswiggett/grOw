@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284271"
-     inkscape:cx="216.26926"
-     inkscape:cy="537.8203"
+     inkscape:cx="219.85682"
+     inkscape:cy="579.96801"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -89,8 +89,8 @@
     <rect
        style="fill:#ff0000"
        id="rect3074"
-       width="11.46913"
-       height="1.0767061"
+       width="21.987329"
+       height="1.6954396"
        x="317.8812"
        y="447.46576" />
     <rect
@@ -124,17 +124,17 @@
     <rect
        style="fill:#ff0000"
        id="rect3084"
-       width="31.790686"
-       height="0.9500348"
+       width="31.481321"
+       height="0.99423689"
        x="297.68097"
        y="499.6543" />
     <rect
        style="fill:#ff0000"
        id="rect3086"
-       width="1.0920464"
-       height="64.032341"
-       x="328.2583"
-       y="435.9386" />
+       width="1.1804293"
+       height="52.188313"
+       x="328.16992"
+       y="447.78265" />
     <rect
        style="fill:#ffff00"
        id="rect3088"
@@ -147,20 +147,20 @@
        id="rect3093"
        width="4.7322011"
        height="3.8001392"
-       x="322.94287"
-       y="438.92239" />
+       x="332.13525"
+       y="440.69016" />
     <rect
        style="fill:#ff0000"
        id="rect3099"
-       width="1.2133849"
-       height="5.82688"
+       width="1.7437134"
+       height="7.1526957"
        x="312.78757"
        y="436.31866" />
     <rect
        style="fill:#ff0000"
        id="rect3101"
-       width="16.987389"
-       height="2.0267408"
+       width="27.063667"
+       height="2.20351"
        x="312.66629"
        y="435.17862" />
     <rect
@@ -177,13 +177,6 @@
        height="112.78353"
        x="353.55338"
        y="419.85516" />
-    <rect
-       style="fill:#ffff00"
-       id="rect3126"
-       width="5.3033009"
-       height="4.2426405"
-       x="333.75439"
-       y="426.57269" />
     <rect
        style="fill:#ff0000"
        id="rect3128"
@@ -257,10 +250,10 @@
     <rect
        style="fill:#ff0000"
        id="rect3150"
-       width="21.213203"
-       height="35.708893"
-       x="150.9673"
-       y="508.59708" />
+       width="114.71321"
+       height="38.208893"
+       x="57.4673"
+       y="506.09708" />
     <rect
        style="fill:#ff0000"
        id="rect3152"
@@ -284,10 +277,108 @@
        y="427.63333" />
     <rect
        style="fill:#ff0000"
-       id="rect3158"
-       width="103.59114"
-       height="9.1923885"
-       x="47.022602"
-       y="508.95062" />
+       id="rect3160"
+       width="1.9445474"
+       height="13.435014"
+       x="337.90866"
+       y="435.49991" />
+    <rect
+       style="fill:#ffff00"
+       id="rect3164"
+       width="6.7175145"
+       height="3.1819806"
+       x="165.10942"
+       y="496.92981" />
+    <rect
+       style="fill:#ffff00"
+       id="rect3166"
+       width="7.0710678"
+       height="6.3639612"
+       x="154.85638"
+       y="486.32321" />
+    <rect
+       style="fill:#ffff00"
+       id="rect3168"
+       width="7.7781744"
+       height="5.3033009"
+       x="140.36069"
+       y="492.68716" />
+    <rect
+       style="fill:#ffff00"
+       id="rect3170"
+       width="5.3033009"
+       height="6.717514"
+       x="127.27922"
+       y="486.67679" />
+    <rect
+       style="fill:#ffff00"
+       id="rect3172"
+       width="7.0710673"
+       height="7.0710678"
+       x="113.13708"
+       y="489.15164" />
+    <rect
+       style="fill:#ffff00"
+       id="rect3174"
+       width="10.606602"
+       height="12.727921"
+       x="92.277428"
+       y="472.88821" />
+    <rect
+       style="fill:#ffff00"
+       id="rect3176"
+       width="17.67767"
+       height="19.091883"
+       x="65.407379"
+       y="477.48438" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3164-4"
+       width="6.7175145"
+       height="3.1819806"
+       x="166.52365"
+       y="461.57446" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3166-8"
+       width="7.0710678"
+       height="6.3639612"
+       x="155.56351"
+       y="453.7963" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3168-5"
+       width="7.7781744"
+       height="5.3033009"
+       x="141.42136"
+       y="445.66455" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3170-6"
+       width="7.7781744"
+       height="7.7781744"
+       x="127.63277"
+       y="434.35086" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3172-3"
+       width="8.485281"
+       height="8.1317282"
+       x="112.07643"
+       y="423.74426" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3174-4"
+       width="14.849242"
+       height="15.556349"
+       x="90.863228"
+       y="405.71304" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3176-1"
+       width="24.395184"
+       height="26.870058"
+       x="55.861439"
+       y="374.95389" />
   </g>
 </svg>

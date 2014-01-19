@@ -14,13 +14,14 @@ import text.Fonts;
 public class Game {
 	// All of these values are scaled by the player's current size.
 	private static final Vec2 GRAVITY = new Vec2(0, -.03);
-	private static final Vec2 JUMP 	  = new Vec2(0, .8);
+	private static final Vec2 JUMP 	  = new Vec2(0, .5);
 	private static final float MOVE_SPEED = .1f;
 	private static final float VERT_DAMPING = .97f;
 	private static final float HORZ_DAMPING = .8f;
 	private static final int VISIBLE_PLAYER_HEIGHT = 40;
 	private static final int JUMP_TIMEOUT = 30;
-	private static final float GROWTH_RATE = .001f;
+	private static final float GROWTH_RATE = .01f;
+	private static final float GROWTH_SCALE = .1f;
 	
 	private int w, h;
 	
@@ -46,7 +47,7 @@ public class Game {
 				new TexturedRect(playerPos, new Vec2(playerSize, playerSize), "assets/textures/player.png", 1, 1, 1);
 				
 		try {
-			curLvl = LevelLoader.load("test3.svg");
+			curLvl = LevelLoader.load("another.svg");
 		} catch (IOException e) {
 			System.err.println("Failed to load level.");
 			e.printStackTrace();
@@ -117,7 +118,7 @@ public class Game {
 				playerPos.y < (c.getPos().y + c.getDim().y)) {
 				System.out.println("COIN GET");
 				curLvl.removeCoin(c);
-				goalPlayerSize += c.getValue();
+				goalPlayerSize += c.getValue() * GROWTH_SCALE;
 				originalPlayerSize = playerSize;
 				playerGrowthSpeed = GROWTH_RATE;
 				// TODO: Start whooshing sound
@@ -153,11 +154,11 @@ public class Game {
 								(left < top    || top    < 0) &&
 								(left < bottom || bottom < 0)) {
 					nextPlayerVel.x = 0;
-					playerPos.x = plat.getPos().x - playerSize * 1.01f;
+					playerPos.x = plat.getPos().x - playerSize * 1f;
 				} else if (right > 0 && (right < top    || top < 0) &&
 										(right < bottom || bottom < 0)) {
 					nextPlayerVel.x = 0;
-					playerPos.x = plat.getPos().x + plat.getDim().x * 1.01f;
+					playerPos.x = plat.getPos().x + plat.getDim().x * 1.00f;
 				} else if (top > 0 && (top < bottom || bottom < 0)) {
 					if (playerVel.y < 2 * GRAVITY.y * playerSize)
 						Sound.play(Sound.LAND);
