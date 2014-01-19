@@ -70,15 +70,15 @@ public class LevelLoader {
 				Element text = (Element) listOfTexts.item(i);
 				
 				String string = text.getElementsByTagName("tspan").item(0).getTextContent();
-				float x = Float.parseFloat(text.getAttribute("x"));
-				float y = Float.parseFloat(text.getAttribute("y"));
-				Vec2 pos = new Vec2(x, y);
 				String style = text.getAttribute("style").split(";")[0];
 				// 10 is the length of "font-size:" and 2 is the length of "px"
 				style = style.substring(10, style.length() - 2);
 				float size = Float.parseFloat(style);
+				float x = Float.parseFloat(text.getAttribute("x"));
+				float y = Float.parseFloat(text.getAttribute("y"));
 				// Adjust coordinates to "flip" the level.
-				y = -1f * y - size;
+				y = -1f * y + size;
+				Vec2 pos = new Vec2(x, y);
 				
 				level.addText(new Text(string, pos, size));				
 				System.out.println("Text:");
