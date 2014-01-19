@@ -88,12 +88,13 @@ public class Game {
 		if (Keyboard.isKeyDown(Keyboard.KEY_LEFT) && !Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) {
 			playerVel = playerVel.add(new Vec2(-MOVE_SPEED * playerSize, 0));
 			playerSprite.step();
-			playerSprite.setGoinRight(false);
-		}
-		if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT) && !Keyboard.isKeyDown(Keyboard.KEY_LEFT)) {
+			playerSprite.setMovingRight(false);
+		} else if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT) && !Keyboard.isKeyDown(Keyboard.KEY_LEFT)) {
 			playerVel = playerVel.add(new Vec2(MOVE_SPEED * playerSize, 0));
 			playerSprite.step();
-			playerSprite.setGoinRight(true);
+			playerSprite.setMovingRight(true);
+		} else {
+			playerSprite.standStill();
 		}
 		if (Keyboard.isKeyDown(Keyboard.KEY_F)) {
 			playerVel.y = playerSize / 2;
