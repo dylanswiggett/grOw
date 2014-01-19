@@ -35,6 +35,8 @@ public class Sound {
 	public static int BUMP;
 	public static int LAND;
 	public static int WHOOSH;
+	public static int COIN;
+	public static int ANTI_COIN;
 	
 	public static void init() {
 		startMusic();
@@ -55,6 +57,8 @@ public class Sound {
 		BUMP = loadSource("assets/sound/Bump.wav", 1, false)[0];
 		LAND = loadSource("assets/sound/Land.wav", 1, false)[0];
 		WHOOSH = loadSource("assets/sound/Wush.wav", 1, false)[0];
+		COIN = loadSource("assets/sound/Coin.wav", 1, false)[0];
+		ANTI_COIN = loadSource("assets/sound/antiCoin.wav", 1, false)[0];
 		
 		
 	}

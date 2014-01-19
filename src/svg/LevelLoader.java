@@ -102,6 +102,9 @@ public class LevelLoader {
 				if (data[0].compareTo("text") == 0) {
 					int px = Integer.parseInt(data[1]);
 					level.addText(new Text(data[2], pos, px));
+				} if (data[0].compareTo("textS") == 0) {
+					int px = Integer.parseInt(data[1]);
+					level.addText(new Text(data[3], pos, px, Float.parseFloat(data[2])));
 				} else if (data[0].compareTo("say") == 0 || data[0].compareTo("sayP") == 0
 						|| data[0].compareTo("sayD") == 0) {
 					int duration = Integer.parseInt(data[1]);

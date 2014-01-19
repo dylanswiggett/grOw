@@ -58,6 +58,10 @@ public class Level implements Drawable{
 		return coins;
 	}
 	
+	public ArrayList<Spike> getSpikes() {
+		return spikes;
+	}
+	
 	public ArrayList<SayBubble> getBubbles() {
 		return bubbles;
 	}

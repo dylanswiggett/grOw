@@ -29,6 +29,8 @@ public class Game {
 	private static float bgVel = 0f;
 
 	private int w, h;
+	
+	private Vec2 respawn;
 
 	private Vec2 playerPos, playerVel;
 	private float playerSize;
@@ -44,6 +46,10 @@ public class Game {
 	private int jumpTimeout = 1;
 
 	private int counter = 1;
+	
+	private boolean playerDead = false;
+	private int playerDeadWait = 0;
+	private static final int DEAD_WAIT = 50;
 
 	// If the player is saying something, it will be said for this many more frames.
 	private int sayCounter;
@@ -71,61 +77,107 @@ public class Game {
 		}
 
 		playerPos = curLvl.getPlayerInitialPosition();
+		respawn = playerPos;
 		playerVel = new Vec2(0, 0);
 		playerSize = curLvl.getPlayerInitialDimensions().y;
 		goalPlayerSize = playerSize;
 	}
 
 	public void step() {
-		/*
-		 * Handle controls
-		 */
-		if (onPlatform && (jumpTimeout == 1) && Keyboard.isKeyDown(Keyboard.KEY_SPACE)) {
-			playerVel = playerVel.add(JUMP.mult(playerSize));
-			jumpTimeout = JUMP_TIMEOUT;
-			Sound.play(Sound.JUMP);
-		}
-		if (jumpTimeout > 1)
-			jumpTimeout--;
-
-		if (Keyboard.isKeyDown(Keyboard.KEY_LEFT) && !Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) {
-			playerVel = playerVel.add(new Vec2(-MOVE_SPEED * playerSize, 0));
-			playerSprite.setFacingRight(false);
-		} else if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT) && !Keyboard.isKeyDown(Keyboard.KEY_LEFT)) {
-			playerVel = playerVel.add(new Vec2(MOVE_SPEED * playerSize, 0));
-			playerSprite.setFacingRight(true);
-		}
-		if (Keyboard.isKeyDown(Keyboard.KEY_F)) {
-			playerVel.y = playerSize / 2;
-		}
-
-		// Animation
-
-		// Always fall if you're going down.
-		if (playerVel.y < -0.01 * playerSize) {
-			if (playerSprite.getAnimation() != Player.Animation.FALLING) {
-				playerSprite.setAnimation(Player.Animation.FALLING);
+		
+		if (playerDead) {
+			playerDeadWait--;
+			if (playerDeadWait == 0) {
+				playerPos = respawn;
+				playerDead = false;
+				int r = (int) (Math.random() * 10);
+				switch (r) {
+				case 0:
+					saying = "Ouch!";
+					break;
+				case 1:
+					saying = "Ow!";
+					break;
+				case 2:
+					saying = "I endure.";
+					break;
+				case 3:
+					saying = "Continue? Yes.";
+					break;
+				case 4:
+					saying = "Suffering.";
+					break;
+				case 5:
+					saying = "What is death, anyways?";
+					break;
+				case 6:
+					saying = "No respite.";
+					break;
+				case 7:
+					saying = "Is there no end?";
+					break;
+				case 8:
+					saying = "Is this the afterlife?";
+					break;
+				case 9:
+					saying = "What happened?";
+					break;
+				default:
+					saying = "Try again.";
+				}
+				sayCounter = 100;
 			}
-		}
-		// Always jump if you're going up.
-		else if (playerVel.y > 0.01 * playerSize) {
-			if (playerSprite.getAnimation() != Player.Animation.JUMPING) {
-				playerSprite.setAnimation(Player.Animation.JUMPING);
+		} else {
+			/*
+			 * Handle controls
+			 */
+			if (onPlatform && (jumpTimeout == 1) && Keyboard.isKeyDown(Keyboard.KEY_SPACE)) {
+				playerVel = playerVel.add(JUMP.mult(playerSize));
+				jumpTimeout = JUMP_TIMEOUT;
+				Sound.play(Sound.JUMP);
 			}
-		}
-		// Land if you just stopped falling.
-		else if(playerSprite.getAnimation() == Player.Animation.FALLING) {
-			playerSprite.setAnimation(Player.Animation.LANDING);
-		}
-		// Walk if you are landing and trying to move.
-		else if (playerSprite.getAnimation() == Player.Animation.LANDING && (Keyboard.isKeyDown(Keyboard.KEY_LEFT) ^ Keyboard.isKeyDown(Keyboard.KEY_RIGHT))) {
-			playerSprite.setAnimation(Player.Animation.WALKING);
-		}
+			if (jumpTimeout > 1)
+				jumpTimeout--;
+	
+			if (Keyboard.isKeyDown(Keyboard.KEY_LEFT) && !Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) {
+				playerVel = playerVel.add(new Vec2(-MOVE_SPEED * playerSize, 0));
+				playerSprite.setFacingRight(false);
+			} else if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT) && !Keyboard.isKeyDown(Keyboard.KEY_LEFT)) {
+				playerVel = playerVel.add(new Vec2(MOVE_SPEED * playerSize, 0));
+				playerSprite.setFacingRight(true);
+			}
+			if (Keyboard.isKeyDown(Keyboard.KEY_F)) {
+				playerVel.y = playerSize / 2;
+			}
+	
+			// Animation
+	
+			// Always fall if you're going down.
+			if (playerVel.y < -0.01 * playerSize) {
+				if (playerSprite.getAnimation() != Player.Animation.FALLING) {
+					playerSprite.setAnimation(Player.Animation.FALLING);
+				}
+			}
+			// Always jump if you're going up.
+			else if (playerVel.y > 0.01 * playerSize) {
+				if (playerSprite.getAnimation() != Player.Animation.JUMPING) {
+					playerSprite.setAnimation(Player.Animation.JUMPING);
+				}
+			}
+			// Land if you just stopped falling.
+			else if(playerSprite.getAnimation() == Player.Animation.FALLING) {
+				playerSprite.setAnimation(Player.Animation.LANDING);
+			}
+			// Walk if you are landing and trying to move.
+			else if (playerSprite.getAnimation() == Player.Animation.LANDING && (Keyboard.isKeyDown(Keyboard.KEY_LEFT) ^ Keyboard.isKeyDown(Keyboard.KEY_RIGHT))) {
+				playerSprite.setAnimation(Player.Animation.WALKING);
+			}
+			
+			playerSprite.step();
 
-		playerSprite.step();
-
-		if (playerSprite.getAnimation() == Player.Animation.WALKING && !(Keyboard.isKeyDown(Keyboard.KEY_LEFT) ^ Keyboard.isKeyDown(Keyboard.KEY_RIGHT))) {
-			playerSprite.standStill();
+			if (playerSprite.getAnimation() == Player.Animation.WALKING && !(Keyboard.isKeyDown(Keyboard.KEY_LEFT) ^ Keyboard.isKeyDown(Keyboard.KEY_RIGHT))) {
+				playerSprite.standStill();
+			}
 		}
 
 		// Growing/Shrinking
@@ -175,14 +227,19 @@ public class Game {
 					playerPos.y < (c.getPos().y + c.getDim().y)) {
 				System.out.println("COIN GET");
 				curLvl.removeCoin(c);
+				respawn = c.getPos();
 				if (c.isAnti()) {
+					Sound.play(Sound.ANTI_COIN);
 					goalPlayerSize = c.getValue();
 					originalPlayerSize = playerSize;
 					playerShrinkSpeed = -GROWTH_RATE;
+					playerGrowthSpeed = 0;
 				}else {
+					Sound.play(Sound.COIN);
 					goalPlayerSize += c.getValue() * GROWTH_SCALE;
 					originalPlayerSize = playerSize;
 					playerGrowthSpeed = GROWTH_RATE;
+					playerShrinkSpeed = 0;
 				}
 				Sound.play(Sound.WHOOSH);
 			}
@@ -250,6 +307,25 @@ public class Game {
 		}
 
 		playerVel = nextPlayerVel;
+		
+		ArrayList<Spike> spikes = curLvl.getSpikes();
+		
+		
+		for (int i = 0; i < spikes.size(); i++) {
+			Spike s = spikes.get(i);
+			if ((playerPos.x + playerSize) > s.getPos().x 		&&
+					playerPos.x < (s.getPos().x + s.getDim().x) 	&& 
+					(playerPos.y + playerSize) > s.getPos().y 		&&
+					playerPos.y < (s.getPos().y + s.getDim().y)) {
+				s.bloody();
+				playerDead = true;
+			}
+		}
+		
+		if (playerDead && playerDeadWait == 0) {
+			playerDeadWait = DEAD_WAIT;
+			playerDead = true;
+		}
 		
 		// Keep streaming audio working.
 		Sound.poll();
