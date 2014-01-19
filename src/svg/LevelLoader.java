@@ -87,15 +87,25 @@ public class LevelLoader {
 				if (data[0].compareTo("text") == 0) {
 					int px = Integer.parseInt(data[1]);
 					level.addText(new Text(data[2], pos, px));
-				} else if (data[0].compareTo("say") == 0 || data[0].compareTo("sayP") == 0) {
+				} else if (data[0].compareTo("say") == 0 || data[0].compareTo("sayP") == 0
+						|| data[0].compareTo("sayD") == 0) {
 					int duration = Integer.parseInt(data[1]);
+					if ( data[0].compareTo("sayD") == 0) {
+						int width = Integer.parseInt(data[3]);
+						int height = Integer.parseInt(data[4]);
+						Vec2 dim = new Vec2(width, height);
+						System.out.println(pos);
+						pos = new Vec2(pos.x, -pos.y);
+						level.addBubble(new SayBubble(pos.subtract(dim.mult(.5f)),
+								dim, duration, data[5], false, Integer.parseInt(data[2])));
+					}
 					int width = Integer.parseInt(data[2]);
 					int height = Integer.parseInt(data[3]);
 					Vec2 dim = new Vec2(width, height);
 					System.out.println(pos);
 					pos = new Vec2(pos.x, -pos.y);
 					level.addBubble(new SayBubble(pos.subtract(dim.mult(.5f)),
-							dim, duration, data[4], data[0].compareTo("sayP") == 0));
+							dim, duration, data[4], data[0].compareTo("sayP") == 0, 0));
 				}
 				
 				System.out.println("Text:");

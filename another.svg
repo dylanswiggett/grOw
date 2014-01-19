@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="89.6"
-     inkscape:cx="127.35174"
-     inkscape:cy="466.19043"
+     inkscape:zoom="15.839192"
+     inkscape:cx="399.08239"
+     inkscape:cy="500.80997"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -140,15 +140,15 @@
     <text
        xml:space="preserve"
        style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="62.124401"
-       y="584.5354"
+       x="61.682461"
+       y="582.54669"
        id="text3313"
        sodipodi:linespacing="126%"><tspan
          sodipodi:role="line"
          id="tspan3315"
-         x="62.124401"
-         y="584.5354"
-         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || ROOM 1</tspan></text>
+         x="61.682461"
+         y="582.54669"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || Eri son</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -328,13 +328,6 @@
        height="61.25"
        x="121.60714"
        y="522.54077" />
-    <rect
-       style="fill:#ff00ff"
-       id="rect3226"
-       width="1.5152289"
-       height="1.3889598"
-       x="27.412031"
-       y="552.06946" />
     <text
        xml:space="preserve"
        style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -392,7 +385,7 @@
          style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 20 || 20 || There's something above me...</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999904999999956%;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Sans"
        x="155.89484"
        y="586.68884"
        id="text3313-6-6-5-1"
@@ -401,7 +394,7 @@
          id="tspan3315-8-0-4-2"
          x="155.89484"
          y="586.68884"
-         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 20 || 20 || If only I had a ladder...</tspan></text>
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans;fill:#ff0000">say || 160 || 20 || 20 || If I only had a ladder...</tspan></text>
     <rect
        style="fill:#ff0000"
        id="rect3750"
@@ -727,14 +720,14 @@
     <rect
        style="fill:#ff0000"
        id="rect3799-8-3"
-       width="84.190781"
+       width="147.71663"
        height="2.2674"
        x="336.30096"
        y="569.70142" />
     <rect
        style="fill:#ff0000"
        id="rect4249"
-       width="75.824577"
+       width="155.99704"
        height="18.877226"
        x="341.81036"
        y="571.34015" />
@@ -781,15 +774,15 @@
     <text
        xml:space="preserve"
        style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="364.3204"
-       y="567.75311"
+       x="356.23917"
+       y="567.9425"
        id="text3313-6-6-5-1-0-0-1"
        sodipodi:linespacing="126%"><tspan
          sodipodi:role="line"
          id="tspan3315-8-0-4-2-2-7-0"
-         x="364.3204"
-         y="567.75311"
-         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 5 || 5 || Floating coins?</tspan></text>
+         x="356.23917"
+         y="567.9425"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 5 || 5 || Floating coins? Eat me?</tspan></text>
     <rect
        style="fill:#ffff00"
        id="rect4298"
@@ -863,7 +856,7 @@
          id="tspan3315-8-0-4-2-2-7-0-6"
          x="361.26349"
          y="563.83167"
-         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 2 || 2 || So close.</tspan></text>
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 50 || 2 || 2 || So close.</tspan></text>
     <rect
        style="fill:#ff0000"
        id="rect3758-1"
@@ -871,5 +864,393 @@
        height="0.89734399"
        x="218.18398"
        y="578.24664" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="61.278553"
+       y="583.41046"
+       id="text3313-08"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-98"
+         x="61.278553"
+         y="583.41046"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || Researc</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="61.783627"
+       y="584.32599"
+       id="text3313-89"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-85"
+         x="61.783627"
+         y="584.32599"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || Facil ty</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="64.593109"
+       y="584.57843"
+       id="text3313-3"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-7"
+         x="64.593109"
+         y="584.57843"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || i</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="63.582962"
+       y="582.40033"
+       id="text3313-34"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-89"
+         x="63.582962"
+         y="582.40033"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || k</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="65.916824"
+       y="583.52258"
+       id="text3313-08-6"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-98-5"
+         x="65.916824"
+         y="583.52258"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || h</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="79.898201"
+       y="585.08356"
+       id="text3313-6-0"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-9"
+         x="79.898201"
+         y="585.08356"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || private pro</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="88.370201"
+       y="585.27295"
+       id="text3313-6-0-2"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-9-1"
+         x="88.370201"
+         y="585.27295"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || rt</tspan></text>
+    <rect
+       style="fill:#ff0000"
+       id="rect4524"
+       width="2.5892856"
+       height="1.0714285"
+       x="125.80357"
+       y="582.67468" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4526"
+       width="1.6517857"
+       height="1.3392857"
+       x="132.41072"
+       y="579.99609" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="307.63913"
+       y="566.73352"
+       id="text3313-6-1-2"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-1-3"
+         x="307.63913"
+         y="566.73352"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 30 || Specimen</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="308.285"
+       y="567.89417"
+       id="text3313-6-1-2-8"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-1-3-6"
+         x="308.285"
+         y="567.89417"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 30 || Sto rg  </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="305.96353"
+       y="569.23352"
+       id="text3313-6-1-2-3"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-1-3-67"
+         x="305.96353"
+         y="569.23352"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 10 || Authorized employees only.</tspan></text>
+    <rect
+       style="fill:#ff0000"
+       id="rect4591"
+       width="3.4821429"
+       height="33.32972"
+       x="382.23215"
+       y="534.5943" />
+    <rect
+       style="fill:#ffff00"
+       id="rect4593"
+       width="2.1428571"
+       height="2.6795006"
+       x="429.24481"
+       y="564.5979" />
+    <rect
+       style="fill:#ff00ff"
+       id="rect3226"
+       width="1.5152289"
+       height="1.3889598"
+       x="347.49249"
+       y="564.01654" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="418.86984"
+       y="568.38446"
+       id="text3313-6-6-5-1-0-0-1-3"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2-2-7-0-9"
+         x="418.86984"
+         y="568.38446"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 60 || 5 || 5 || I wonder what will happen if I...</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="450.0715"
+       y="568.57385"
+       id="text3313-6-6-5-1-0-0-1-3-9"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2-2-7-0-9-3"
+         x="450.0715"
+         y="568.57385"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 60 || 10 || 10 || Yum!</tspan></text>
+    <rect
+       style="fill:#ff0000"
+       id="rect4687"
+       width="24.906574"
+       height="6.9132314"
+       x="472.30945"
+       y="566.03687" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4689"
+       width="17.961775"
+       height="5.2717338"
+       x="479.1911"
+       y="563.73248" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4691"
+       width="28.094856"
+       height="35.734173"
+       x="489.41891"
+       y="546.9071" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4693"
+       width="9.2176418"
+       height="1.1364217"
+       x="475.46619"
+       y="559.34454" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="478.52222"
+       y="557.96729"
+       id="text3313-6-6-5-1-0-0-1-3-9-0"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2-2-7-0-9-3-8"
+         x="478.52222"
+         y="557.96729"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 10 || 10 || Huh. Nothing happened...</tspan></text>
+    <rect
+       style="fill:#ff0000"
+       id="rect4716"
+       width="2.7147849"
+       height="1.767767"
+       x="469.72095"
+       y="556.37732" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4716-7"
+       width="32.0723"
+       height="1.7677854"
+       x="409.83786"
+       y="547.47534" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4768"
+       width="1.5783502"
+       height="0.69449717"
+       x="470.28915"
+       y="558.08191" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4716-3"
+       width="2.7147849"
+       height="1.767767"
+       x="464.07037"
+       y="554.79889" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4768-9"
+       width="1.5783502"
+       height="0.69449717"
+       x="464.63858"
+       y="556.50348" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4716-6"
+       width="2.7147849"
+       height="1.767767"
+       x="457.44128"
+       y="553.91504" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4768-2"
+       width="1.5783502"
+       height="0.69449717"
+       x="458.00949"
+       y="555.61963" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4716-73"
+       width="2.7147849"
+       height="1.767767"
+       x="451.44351"
+       y="552.58917" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4768-4"
+       width="1.5783502"
+       height="0.69449717"
+       x="452.01172"
+       y="554.29376" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4716-68"
+       width="2.7147849"
+       height="1.767767"
+       x="444.8775"
+       y="550.69513" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4768-8"
+       width="1.5783502"
+       height="0.69449717"
+       x="445.44571"
+       y="552.39972" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4824"
+       width="17.551401"
+       height="1.1364216"
+       x="415.99344"
+       y="540.21484" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4826"
+       width="5.9977808"
+       height="2.3359778"
+       x="422.93823"
+       y="538.13141" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4828"
+       width="5.5558391"
+       height="4.7350898"
+       x="428.30469"
+       y="536.61615" />
+    <rect
+       style="fill:#ffff00"
+       id="rect4830"
+       width="2.588516"
+       height="2.0203052"
+       x="416.75107"
+       y="544.38177" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4832"
+       width="2.1465743"
+       height="5.4295697"
+       x="409.80627"
+       y="543.75037" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4834"
+       width="28.284271"
+       height="25.064409"
+       x="382.21646"
+       y="524.17865" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4836"
+       width="2.2728431"
+       height="19.697975"
+       x="384.80499"
+       y="546.14948" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4838"
+       width="4.3562827"
+       height="21.718279"
+       x="386.50961"
+       y="541.85632" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="416.98898"
+       y="546.09796"
+       id="text3313-6-6-5-1-0-0-1-3-8"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2-2-7-0-9-36"
+         x="416.98898"
+         y="546.09796"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">sayD || 80 || 40 || 1 || 1 || What.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="416.94626"
+       y="546.09796"
+       id="text3313-6-6-5-1-0-0-1-3-8-6"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2-2-7-0-9-36-6"
+         x="416.94626"
+         y="546.09796"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">sayD || 100 || 100 || 1 || 1 || I... grew.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="358.02664"
+       y="560.99774"
+       id="text3313-6-1-2-2"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-1-3-3"
+         x="358.02664"
+         y="560.99774"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 30 || EAT ME</tspan></text>
   </g>
 </svg>

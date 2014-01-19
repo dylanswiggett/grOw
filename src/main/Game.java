@@ -2,17 +2,14 @@ package main;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
-import org.newdawn.slick.Color;
-import org.newdawn.slick.opengl.Texture;
-import org.newdawn.slick.opengl.TextureLoader;
-import org.newdawn.slick.util.ResourceLoader;
 
 import sound.Sound;
 import svg.LevelLoader;
-import text.Fonts;
 
 public class Game {
 	// All of these values are scaled by the player's current size.
@@ -49,7 +46,10 @@ public class Game {
 
 	// If the player is saying something, it will be said for this many more frames.
 	private int sayCounter;
+	private int sayWait = 0;
 	private String saying;
+	
+	private Queue<SayBubble> toSay = new LinkedList<SayBubble>();
 
 	public Game(int w, int h) {
 		this.w = w;
@@ -172,8 +172,7 @@ public class Game {
 					playerPos.y < (b.getPos().y + b.getDim().y)) {
 				if (!b.isPerm())
 					curLvl.removeBubble(b);
-				saying = b.getMessage();
-				sayCounter = b.getDur();
+				toSay.add(b);
 			}
 		}
 
@@ -266,10 +265,35 @@ public class Game {
 
 		GL11.glTranslatef(-playerPos.x + w / 2,
 				-playerPos.y + h / 2, 0);
-		if (sayCounter > 0) {
+		if (sayWait > 0)
+			sayWait--;
+		else if (sayCounter > 0) {
 			new TextBubble(playerPos.add(new Vec2(playerSize * scale, playerSize * scale)),
 					saying).draw();
 			sayCounter--;
+		}
+		if (!toSay.isEmpty()){
+			SayBubble minDelayB = null;
+			int minDelay = 100000;
+			for (int i = 0; i < toSay.size(); i++) {
+				SayBubble b = toSay.peek();
+				if (b.getDelay() < minDelay) {
+					minDelayB = b;
+					minDelay = b.getDelay();
+				}
+				if (b.getDelay() == 0)
+					break;
+				toSay.add(toSay.remove());
+				
+			}
+			if ((!(minDelayB.getDelay() > 0)) || sayCounter == 0) {
+				toSay.remove();
+				saying = minDelayB.getMessage();
+				sayCounter = minDelayB.getDur();
+				sayWait = minDelayB.getDelay();
+			} else {
+				toSay.add(toSay.remove());
+			}
 		}
 		GL11.glPopMatrix();
 	}

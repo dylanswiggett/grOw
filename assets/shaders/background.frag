@@ -14,6 +14,6 @@ float rand(vec2 co){
 void main(){
 	vec2 actualPos = gl_FragCoord.xy - cameraPos;
 	
-	float color = rand(actualPos * time) * bgColor;
+	float color = rand(actualPos * time / 1000.0) * bgColor;
 	gl_FragColor = vec4(color, color, color, 1.0);
 }

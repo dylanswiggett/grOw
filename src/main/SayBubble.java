@@ -6,16 +6,17 @@ public class SayBubble implements Drawable{
 			new ColorRect(new Vec2(0, 0), new Vec2(0, 0), 0, 0, 1);
 	
 	Vec2 pos, dim;
-	int dur;
+	int dur, delay;
 	String msg;
 	boolean isPerm;
 	
-	public SayBubble(Vec2 pos, Vec2 dim, int duration, String msg, boolean isPerm) {
+	public SayBubble(Vec2 pos, Vec2 dim, int duration, String msg, boolean isPerm, int delay) {
 		this.pos = pos;
 		this.dim = dim;
 		this.dur = duration;
 		this.msg = msg;
 		this.isPerm = isPerm;
+		this.delay = delay;
 	}
 	
 	public void draw() {
@@ -38,6 +39,10 @@ public class SayBubble implements Drawable{
 	
 	public int getDur() {
 		return dur;
+	}
+	
+	public int getDelay() {
+		return delay;
 	}
 	
 	public boolean isPerm() {
