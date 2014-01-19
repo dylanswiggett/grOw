@@ -37,6 +37,10 @@ public class Level implements Drawable{
 		return platforms;
 	}
 	
+	public ArrayList<Coin> getCoins() {
+		return coins;
+	}
+	
 	public Vec2 getPlayerInitialPosition() {
 		return playerInitialPosition;
 	}

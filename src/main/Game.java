@@ -1,6 +1,7 @@
 package main;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
@@ -78,6 +79,19 @@ public class Game {
 		playerPos = playerPos.add(playerVel);
 		
 		Vec2 nextPlayerVel = new Vec2(playerVel);
+		
+		ArrayList<Coin> coins = curLvl.getCoins();
+		
+		for (int i = 0; i < coins.size(); i++) {
+			Coin c = coins.get(i);
+			if ((playerPos.x + playerSize) > c.getPos().x 		&&
+				playerPos.x < (c.getPos().x + c.getDim().x) 	&& 
+				(playerPos.y + playerSize) > c.getPos().y 		&&
+				playerPos.y < (c.getPos().y + c.getDim().y)) {
+				System.out.println("COIN GET");
+				curLvl.removeCoin(c);
+			}
+		}
 		
 		/*
 		 * Handle collisions with platforms
