@@ -323,7 +323,6 @@ public class Game {
 		}
 		
 		if (playerDead && playerDeadWait == 0) {
-			System.out.println("DEAD");
 			Sound.play(Sound.DEATH);
 			playerDeadWait = DEAD_WAIT;
 			playerDead = true;
