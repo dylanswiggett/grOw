@@ -7,6 +7,7 @@ public class Level implements Drawable{
 	private ArrayList<Drawable> drawables;
 	
 	private ArrayList<Platform> platforms;
+	private ArrayList<Coin> coins;
 	
 	private Vec2 playerInitialPosition;
 	private Vec2 playerInitialDimensions;
@@ -19,6 +20,11 @@ public class Level implements Drawable{
 	public void addPlatform(Platform p) {
 		platforms.add(p);
 		drawables.add(p);
+	}
+	
+	public void addCoin(Coin c) {
+		coins.add(c);
+		drawables.add(c);
 	}
 	
 	public ArrayList<Platform> getPlatforms() {
