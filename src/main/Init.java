@@ -7,6 +7,8 @@ import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.opengl.GL11;
 
+import sound.Sound;
+
 public class Init {
 
 	public static final int WIDTH = 800;
@@ -24,6 +26,9 @@ public class Init {
 			e.printStackTrace();
 			System.exit(1);
 		}
+		
+		// Load sound files. We can move this later if it takes too long.
+		Sound.init();
 		
 		game = new Game(WIDTH, HEIGHT);
 		
