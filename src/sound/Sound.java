@@ -37,6 +37,7 @@ public class Sound {
 	public static int WHOOSH;
 	public static int COIN;
 	public static int ANTI_COIN;
+	public static int DEATH;
 	
 	public static void init() {
 		startMusic();
@@ -59,7 +60,7 @@ public class Sound {
 		WHOOSH = loadSource("assets/sound/Wush.wav", 1, false)[0];
 		COIN = loadSource("assets/sound/Coin.wav", 1, false)[0];
 		ANTI_COIN = loadSource("assets/sound/antiCoin.wav", 1, false)[0];
-		
+		ANTI_COIN = loadSource("assets/sound/Spike.wav", 1, false)[0];
 		
 	}
 	

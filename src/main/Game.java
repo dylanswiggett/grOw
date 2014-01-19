@@ -185,7 +185,6 @@ public class Game {
 
 		// Growing/Shrinking
 		if (Math.abs(playerSize - goalPlayerSize) <= playerGrowthSpeed / 2) {
-			System.out.println("Grow stop");
 			playerSize = goalPlayerSize;
 			playerGrowthSpeed = 0;
 			Sound.stop(Sound.WHOOSH);
@@ -199,7 +198,6 @@ public class Game {
 		}
 		
 		if (Math.abs(playerSize - goalPlayerSize) <= playerShrinkSpeed / 2) {
-			System.out.println("Shrink stop");
 			playerSize = goalPlayerSize;
 			playerShrinkSpeed = 0;
 			Sound.stop(Sound.WHOOSH);
@@ -228,7 +226,6 @@ public class Game {
 					playerPos.x < (c.getPos().x + c.getDim().x) 	&& 
 					(playerPos.y + playerSize) > c.getPos().y 		&&
 					playerPos.y < (c.getPos().y + c.getDim().y)) {
-				System.out.println("COIN GET");
 				curLvl.removeCoin(c);
 				respawn = c.getPos();
 				if (c.isAnti()) {
@@ -326,6 +323,8 @@ public class Game {
 		}
 		
 		if (playerDead && playerDeadWait == 0) {
+			System.out.println("DEAD");
+			Sound.play(Sound.DEATH);
 			playerDeadWait = DEAD_WAIT;
 			playerDead = true;
 		}
