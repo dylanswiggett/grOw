@@ -33,6 +33,7 @@ public class Game {
 	private Vec2 playerPos, playerVel;
 	private float playerSize;
 	private float playerGrowthSpeed = 0;
+	private float playerShrinkSpeed = 0;
 	private float originalPlayerSize;
 	private float goalPlayerSize;
 	private Player playerSprite;
@@ -73,7 +74,6 @@ public class Game {
 		playerVel = new Vec2(0, 0);
 		playerSize = curLvl.getPlayerInitialDimensions().y;
 		goalPlayerSize = playerSize;
-		System.out.println(playerPos.x);
 	}
 
 	public void step() {
@@ -128,9 +128,9 @@ public class Game {
 			playerSprite.standStill();
 		}
 
-		// Growing
-
-		if (playerSize >= goalPlayerSize) {
+		// Growing/Shrinking
+		if (Math.abs(playerSize - goalPlayerSize) <= playerGrowthSpeed / 2) {
+			System.out.println("Grow stop");
 			playerSize = goalPlayerSize;
 			playerGrowthSpeed = 0;
 			Sound.stop(Sound.WHOOSH);
@@ -141,6 +141,20 @@ public class Game {
 				playerGrowthSpeed += GROWTH_RATE;
 			playerSize += playerGrowthSpeed;
 			Sound.setVolume(Sound.WHOOSH, playerGrowthSpeed);
+		}
+		
+		if (Math.abs(playerSize - goalPlayerSize) <= playerShrinkSpeed / 2) {
+			System.out.println("Shrink stop");
+			playerSize = goalPlayerSize;
+			playerShrinkSpeed = 0;
+			Sound.stop(Sound.WHOOSH);
+		} else if (playerSize > goalPlayerSize) {
+			if (playerSize < (originalPlayerSize + goalPlayerSize) / 2 && playerShrinkSpeed < -GROWTH_RATE)
+				playerShrinkSpeed += GROWTH_RATE;
+			else
+				playerShrinkSpeed -= GROWTH_RATE;
+			playerSize += playerShrinkSpeed;
+			Sound.setVolume(Sound.WHOOSH, -playerShrinkSpeed);
 		}
 
 		// Gravity
@@ -161,9 +175,15 @@ public class Game {
 					playerPos.y < (c.getPos().y + c.getDim().y)) {
 				System.out.println("COIN GET");
 				curLvl.removeCoin(c);
-				goalPlayerSize += c.getValue() * GROWTH_SCALE;
-				originalPlayerSize = playerSize;
-				playerGrowthSpeed = GROWTH_RATE;
+				if (c.isAnti()) {
+					goalPlayerSize = c.getValue();
+					originalPlayerSize = playerSize;
+					playerShrinkSpeed = -GROWTH_RATE;
+				}else {
+					goalPlayerSize += c.getValue() * GROWTH_SCALE;
+					originalPlayerSize = playerSize;
+					playerGrowthSpeed = GROWTH_RATE;
+				}
 				Sound.play(Sound.WHOOSH);
 			}
 		}

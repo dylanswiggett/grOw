@@ -50,8 +50,15 @@ public class LevelLoader {
 					System.out.println("\tx: " + x);
 					System.out.println("\ty: " + y);
 				} else if (style.equals("fill:#ffff00")) {
-					level.addCoin(new Coin(pos, dim.y));
+					level.addCoin(new Coin(pos, dim.y, false));
 					System.out.println("Coin:");
+					System.out.println("\twidth: " + width);
+					System.out.println("\theight: " + height);
+					System.out.println("\tx: " + x);
+					System.out.println("\ty: " + y);
+				} else if (style.equals("fill:#0000ff")) {
+					level.addCoin(new Coin(pos, dim.y, true));
+					System.out.println("Anti Coin:");
 					System.out.println("\twidth: " + width);
 					System.out.println("\theight: " + height);
 					System.out.println("\tx: " + x);
