@@ -20,7 +20,7 @@ public class Game {
 	private static final Vec2 JUMP 	  = new Vec2(0, .5);
 	private static final float MOVE_SPEED = .1f;
 	private static final float VERT_DAMPING = .97f;
-	private static final float HORZ_DAMPING = .8f;
+	private static final float HORZ_DAMPING = .7f;
 	private static final int VISIBLE_PLAYER_HEIGHT = 40;
 	private static final int JUMP_TIMEOUT = 30;
 	private static final float GROWTH_RATE = .001f;
@@ -143,7 +143,6 @@ public class Game {
 			}
 		}
 		
-
 		ArrayList<SayBubble> bubbles = curLvl.getBubbles();
 		
 		for (int i = 0; i < bubbles.size(); i++) {
@@ -152,7 +151,8 @@ public class Game {
 				playerPos.x < (b.getPos().x + b.getDim().x) 	&& 
 				(playerPos.y + playerSize) > b.getPos().y 		&&
 				playerPos.y < (b.getPos().y + b.getDim().y)) {
-				curLvl.removeBubble(b);
+				if (!b.isPerm())
+					curLvl.removeBubble(b);
 				saying = b.getMessage();
 				sayCounter = b.getDur();
 			}
@@ -215,9 +215,14 @@ public class Game {
 		
 		GL11.glPushMatrix();
 		
-		GL11.glTranslatef(-playerPos.x * scale + w / 2,
-						  -playerPos.y * scale + h / 2, 0);
+		Vec2 cameraOffset = new Vec2(-playerPos.x * scale + w / 2,
+				  -playerPos.y * scale + h / 2);
+		
+		GL11.glTranslatef(cameraOffset.x, cameraOffset.y, 0);
 		GL11.glScalef(scale, scale, 0);
+		
+		// Used for shader
+		Platform.cameraPos = cameraOffset;
 		
 		curLvl.draw();
 		
