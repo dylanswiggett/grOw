@@ -27,6 +27,7 @@ public class Game {
 	private static final float GROWTH_SCALE = .2f;
 	
 	private static TexturedRect background;
+	private static Shader bgShader = new Shader("assets/shaders/basic.vert", "assets/shaders/background.frag");
 	
 	private int w, h;
 	
@@ -209,7 +210,11 @@ public class Game {
 	}
 	
 	public void draw() {
+		bgShader.enable();
+		bgShader.Uniform1f("time", counter++);
+		counter %= 1000;
 		background.draw();
+		bgShader.disable();
 		
 		float scale = VISIBLE_PLAYER_HEIGHT / playerSize;
 		
