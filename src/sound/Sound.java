@@ -1,13 +1,18 @@
 package sound;
 
 import java.io.BufferedInputStream;
+import java.io.IOException;
 import java.nio.FloatBuffer;
 
 import org.lwjgl.BufferUtils;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.openal.AL;
 import org.lwjgl.openal.AL10;
+import org.newdawn.slick.openal.Audio;
+import org.newdawn.slick.openal.AudioLoader;
+import org.newdawn.slick.openal.SoundStore;
 import org.newdawn.slick.openal.WaveData;
+import org.newdawn.slick.util.ResourceLoader;
 
 public class Sound {
 
@@ -32,13 +37,14 @@ public class Sound {
 	public static int WHOOSH;
 	
 	public static void init() {
-		try{
+		startMusic();
+		/*try{
 			AL.create();
 		} catch (LWJGLException e) {
 			e.printStackTrace();
 			System.exit(-1);
 		}
-		AL10.alGetError();
+		AL10.alGetError();*/
 		
 		AL10.alListener(AL10.AL_POSITION,    listenerPos);
 		AL10.alListener(AL10.AL_VELOCITY,    listenerVel);
@@ -49,6 +55,8 @@ public class Sound {
 		BUMP = loadSource("assets/sound/Bump.wav", 1, false)[0];
 		LAND = loadSource("assets/sound/Land.wav", 1, false)[0];
 		WHOOSH = loadSource("assets/sound/Wush.wav", 1, false)[0];
+		
+		
 	}
 	
 	public static int[] loadSource(String filepath, int maxSources, boolean looping) {
@@ -120,6 +128,34 @@ public class Sound {
 	
 	public static void setVolume(int sound, float gain) {
 		AL10.alSourcef(sound, AL10.AL_GAIN, gain);
+	}
+	
+	public static Audio MUSIC_INTRO;
+	public static Audio MUSIC_LOOP;
+	
+	private static boolean introOver;
+	private static long musicStartTime;
+	
+	public static void startMusic() {
+		try {
+			MUSIC_INTRO = AudioLoader.getStreamingAudio("OGG", ResourceLoader.getResource("assets/sound/song.ogg"));
+			MUSIC_LOOP = AudioLoader.getStreamingAudio("OGG", ResourceLoader.getResource("assets/sound/songLoop.ogg"));
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.exit(-1);
+		}
+		
+		introOver = false;
+		MUSIC_INTRO.playAsMusic(1.0f, 1.0f, false);
+		musicStartTime = System.currentTimeMillis();
+	}
+	
+	public static void poll() {
+		SoundStore.get().poll(0);
+		if (!introOver && (System.currentTimeMillis() - musicStartTime)/1000 > 81) {
+			introOver = true;
+			MUSIC_LOOP.playAsMusic(1.0f, 1.0f, true);
+		}
 	}
 	
 }
