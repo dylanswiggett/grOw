@@ -10,8 +10,13 @@ import org.newdawn.slick.util.ResourceLoader;
 
 public class TexturedRect implements Drawable{
 	private Vec2 pos, dim;
-	private Texture texture;
-	private float r, g, b;
+	protected Texture texture;
+	protected float r, g, b;
+	
+	public TexturedRect(Vec2 pos, Vec2 dim) {
+		this.pos = pos;
+		this.dim = dim;
+	}
 	
 	public TexturedRect(Vec2 pos, Vec2 dim, String filePath, float r, float g, float b) {
 		this.pos = pos;
