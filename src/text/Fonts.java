@@ -6,11 +6,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 
+import main.Vec2;
+
+import org.lwjgl.opengl.GL11;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.TrueTypeFont;
 import org.newdawn.slick.util.ResourceLoader;
 
 public class Fonts {
 	public static final Font ABSENDER = loadFont("assets/fonts/absender1.ttf");
+	public static final Font MONOFONTO = loadFont("assets/fonts/monofonto.ttf");
 	
 	private static HashMap<Font, HashMap<Float, TrueTypeFont>> fontSizes =
 			new HashMap<>();
@@ -38,8 +43,19 @@ public class Fonts {
 			sizes = new HashMap<Float, TrueTypeFont>();
 			fontSizes.put(f, sizes);
 		}
-		TrueTypeFont newFont = new TrueTypeFont(f.deriveFont(size), false);
+		TrueTypeFont newFont = new TrueTypeFont(f.deriveFont(size), true);
 		sizes.put(size, newFont);
 		return newFont;
+	}
+	
+	public static void draw(Font font, int size, Vec2 pos, String text, Color color) {
+		GL11.glPushMatrix();
+		GL11.glTranslatef(pos.x, pos.y, 0);
+		GL11.glScalef(1, -1, 1);
+		GL11.glEnable(GL11.GL_TEXTURE_2D);
+		Fonts.getFont(font, size).drawString(
+				0, 0, "TESTING", Color.yellow);
+		GL11.glDisable(GL11.GL_TEXTURE_2D);
+		GL11.glPopMatrix();
 	}
 }

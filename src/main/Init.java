@@ -21,7 +21,7 @@ public class Init {
 			Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
 			Display.setTitle("grOw -- developer edition");
 			Display.create();
-//			Display.setVSyncEnabled(true);
+			Display.setVSyncEnabled(true);
 		} catch (LWJGLException e) {
 			System.err.println("Failed to intialize display. Exiting.");
 			e.printStackTrace();
