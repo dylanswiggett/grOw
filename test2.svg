@@ -171,5 +171,33 @@
        height="56.543667"
        x="489.24878"
        y="677.18542" />
+    <rect
+       style="fill:#ffff00"
+       id="rect3044"
+       width="15"
+       height="12.142858"
+       x="382.85715"
+       y="461.29074" />
+    <rect
+       style="fill:#ffff00"
+       id="rect3046"
+       width="7.1428571"
+       height="5.7142859"
+       x="596.78571"
+       y="408.43362" />
+    <rect
+       style="fill:#ffff00"
+       id="rect3048"
+       width="9.6428576"
+       height="4.6428571"
+       x="619.64288"
+       y="409.86218" />
+    <rect
+       style="fill:#ffff00"
+       id="rect3050"
+       width="7.5"
+       height="5.3571429"
+       x="655"
+       y="410.21933" />
   </g>
 </svg>

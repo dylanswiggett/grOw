@@ -28,6 +28,11 @@ public class Level implements Drawable{
 		drawables.add(c);
 	}
 	
+	public void removeCoin(Coin c) {
+		coins.remove(c);
+		drawables.remove(c);
+	}
+	
 	public ArrayList<Platform> getPlatforms() {
 		return platforms;
 	}
