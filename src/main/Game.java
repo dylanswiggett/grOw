@@ -20,6 +20,7 @@ public class Game {
 	private static final float HORZ_DAMPING = .8f;
 	private static final int VISIBLE_PLAYER_HEIGHT = 40;
 	private static final int JUMP_TIMEOUT = 30;
+	private static final float GROWTH_RATE = .001f;
 	
 	private int w, h;
 	
@@ -83,16 +84,16 @@ public class Game {
 		
 		// Growing
 		
-		if (playerSize > goalPlayerSize) {
+		if (playerSize >= goalPlayerSize) {
 			playerSize = goalPlayerSize;
 			playerGrowthSpeed = 0;
 			// TODO: Stop whooshing sound
 			Sound.WHOOSH.stop();
 		} else if (playerSize < goalPlayerSize) {
-			if (playerSize > (originalPlayerSize + goalPlayerSize) / 2)
-				playerGrowthSpeed -= .01;
+			if (playerSize > (originalPlayerSize + goalPlayerSize) / 2 && playerGrowthSpeed > GROWTH_RATE)
+				playerGrowthSpeed -= GROWTH_RATE;
 			else
-				playerGrowthSpeed += .01;
+				playerGrowthSpeed += GROWTH_RATE;
 			playerSize += playerGrowthSpeed;
 			// TODO: Scale whooshing sound relative to playerGrowthSpeed.
 			Sound.WHOOSH.playAsSoundEffect(1.0f, 0.5f * playerGrowthSpeed, true);
@@ -118,7 +119,7 @@ public class Game {
 				curLvl.removeCoin(c);
 				goalPlayerSize += c.getValue();
 				originalPlayerSize = playerSize;
-				playerGrowthSpeed = .1f;
+				playerGrowthSpeed = GROWTH_RATE;
 				// TODO: Start whooshing sound
 				Sound.WHOOSH.playAsSoundEffect(1.0f, 1.0f, true);
 			}
