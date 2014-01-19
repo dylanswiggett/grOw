@@ -233,7 +233,7 @@ public class Game {
 			bgVel += .0003;
 		else if (bgColor > .15)
 			bgVel -= .0003;
-		else bgVel += (Math.random() - .5) * .0003;
+		else bgVel += (Math.random() - .5) * .0005;
 		bgVel *= .95;
 		bgColor += bgVel;
 		counter = (int) (1000 * Math.random());
