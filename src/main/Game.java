@@ -149,6 +149,9 @@ public class Game {
 			if (Keyboard.isKeyDown(Keyboard.KEY_F)) {
 				playerVel.y = playerSize / 2;
 			}
+			if (Keyboard.isKeyDown(Keyboard.KEY_K)){
+				playerDead = true;
+			}
 	
 			// Animation
 	

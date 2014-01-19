@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="45.254834"
-     inkscape:cx="323.18725"
-     inkscape:cy="553.00642"
+     inkscape:zoom="22.627417"
+     inkscape:cx="422.25527"
+     inkscape:cy="573.87008"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1898,13 +1898,6 @@
        x="351.875"
        y="503.2774" />
     <rect
-       style="fill:#ff00ff"
-       id="rect3226"
-       width="1.5152289"
-       height="1.3889598"
-       x="342.82053"
-       y="480.42642" />
-    <rect
        style="fill:#ff0000"
        id="rect5580"
        width="1.8308905"
@@ -2061,10 +2054,10 @@
     <rect
        style="fill:#00ff00"
        id="rect5628"
-       width="1.8303572"
-       height="0.98214287"
+       width="5.4542794"
+       height="1.9986088"
        x="422.94644"
-       y="480.77737" />
+       y="479.76089" />
     <text
        xml:space="preserve"
        style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -2314,17 +2307,10 @@
     <rect
        style="fill:#ff0000"
        id="rect5971"
-       width="5.7562981"
+       width="7.9750481"
        height="2.0550091"
-       x="313.48035"
+       x="311.2616"
        y="501.09509" />
-    <rect
-       style="fill:#ff0000"
-       id="rect5973"
-       width="3.7785883"
-       height="6.9053297"
-       x="310.30939"
-       y="496.12326" />
     <text
        xml:space="preserve"
        style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999904999999956%;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
@@ -2377,5 +2363,12 @@
        height="35.532116"
        x="301.75781"
        y="494.63171" />
+    <rect
+       style="fill:#ff00ff"
+       id="rect3226"
+       width="1.5152289"
+       height="1.3889598"
+       x="31.992386"
+       y="549.91772" />
   </g>
 </svg>
