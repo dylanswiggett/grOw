@@ -62,15 +62,9 @@ public class Fonts {
 	
 	public static void draw(Font font, int size, Vec2 pos, String text, Color color) {
 		GL11.glPushMatrix();
-<<<<<<< HEAD
 		GL11.glTranslatef(pos.x, -pos.y, 0);
-		GL11.glScalef(.5f, -.5f, 0);
-		Fonts.getFont(font, size).drawString(0, 0, text, color);
-=======
-		GL11.glTranslatef(pos.x, pos.y, 0);
-		GL11.glScalef(1f, -1f, 1);
+		GL11.glScalef(0.5f, -0.5f, 0);
 		getFont(font, size).drawString(0, 0, text, color);
->>>>>>> e9e15a465c0fb37acec503dc64aceb48477ae772
 		GL11.glPopMatrix();
 	}
 }
