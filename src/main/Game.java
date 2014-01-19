@@ -16,13 +16,15 @@ import text.Fonts;
 
 public class Game {
 	// All of these values are scaled by the player's current size.
-	private static final Vec2 GRAVITY = new Vec2(0, -.05);
-	private static final Vec2 JUMP 	  = new Vec2(0, 1);
+	private static final Vec2 GRAVITY = new Vec2(0, -.03);
+	private static final Vec2 JUMP 	  = new Vec2(0, .5);
 	private static final float MOVE_SPEED = .1f;
 	private static final float VERT_DAMPING = .97f;
 	private static final float HORZ_DAMPING = .8f;
 	private static final int VISIBLE_PLAYER_HEIGHT = 40;
 	private static final int JUMP_TIMEOUT = 30;
+	private static final float GROWTH_RATE = .001f;
+	private static final float GROWTH_SCALE = .1f;
 	
 	private int w, h;
 	
@@ -48,7 +50,7 @@ public class Game {
 				new TexturedRect(playerPos, new Vec2(playerSize, playerSize), "assets/textures/player.png", 1, 1, 1);
 				
 		try {
-			curLvl = LevelLoader.load("test2.svg");
+			curLvl = LevelLoader.load("another.svg");
 		} catch (IOException e) {
 			System.err.println("Failed to load level.");
 			e.printStackTrace();
@@ -86,16 +88,16 @@ public class Game {
 		
 		// Growing
 		
-		if (playerSize > goalPlayerSize) {
+		if (playerSize >= goalPlayerSize) {
 			playerSize = goalPlayerSize;
 			playerGrowthSpeed = 0;
 			// TODO: Stop whooshing sound
 			Sound.stop(Sound.WHOOSH);
 		} else if (playerSize < goalPlayerSize) {
-			if (playerSize > (originalPlayerSize + goalPlayerSize) / 2)
-				playerGrowthSpeed -= .01;
+			if (playerSize > (originalPlayerSize + goalPlayerSize) / 2 && playerGrowthSpeed > GROWTH_RATE)
+				playerGrowthSpeed -= GROWTH_RATE;
 			else
-				playerGrowthSpeed += .01;
+				playerGrowthSpeed += GROWTH_RATE;
 			playerSize += playerGrowthSpeed;
 			// TODO: Scale whooshing sound relative to playerGrowthSpeed.
 			Sound.setVolume(Sound.WHOOSH, playerGrowthSpeed);
@@ -119,9 +121,9 @@ public class Game {
 				playerPos.y < (c.getPos().y + c.getDim().y)) {
 				System.out.println("COIN GET");
 				curLvl.removeCoin(c);
-				goalPlayerSize += c.getValue();
+				goalPlayerSize += c.getValue() * GROWTH_SCALE;
 				originalPlayerSize = playerSize;
-				playerGrowthSpeed = .1f;
+				playerGrowthSpeed = GROWTH_RATE;
 				// TODO: Start whooshing sound
 				Sound.play(Sound.WHOOSH);
 			}
@@ -155,11 +157,11 @@ public class Game {
 								(left < top    || top    < 0) &&
 								(left < bottom || bottom < 0)) {
 					nextPlayerVel.x = 0;
-					playerPos.x = plat.getPos().x - playerSize - .5f;
+					playerPos.x = plat.getPos().x - playerSize * 1f;
 				} else if (right > 0 && (right < top    || top < 0) &&
 										(right < bottom || bottom < 0)) {
 					nextPlayerVel.x = 0;
-					playerPos.x = plat.getPos().x + plat.getDim().x + .5f;
+					playerPos.x = plat.getPos().x + plat.getDim().x * 1.00f;
 				} else if (top > 0 && (top < bottom || bottom < 0)) {
 					if (playerVel.y < 2 * GRAVITY.y * playerSize)
 						Sound.play(Sound.LAND);
@@ -227,7 +229,7 @@ public class Game {
 		GL11.glTranslatef(-playerPos.x + w / 2,
 						  -playerPos.y + h / 2, 0);
 		new TextBubble(playerPos.add(new Vec2(playerSize * scale, playerSize * scale)),
-				"This is a message to you, the player.".substring(0, (counter++ / 10) % 38)).draw();
+				"Hello, Mr. Player!".substring(0, (counter++ / 10) % 19)).draw();
 		
 		GL11.glPopMatrix();
 	}
