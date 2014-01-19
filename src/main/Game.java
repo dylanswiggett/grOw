@@ -36,7 +36,7 @@ public class Game {
 		playerSprite = new ColorRect(playerPos, new Vec2(playerSize, playerSize), .8f, .8f, 1);
 		
 		try {
-			curLvl = LevelLoader.load("level_test.svg");
+			curLvl = LevelLoader.load("test2.svg");
 		} catch (IOException e) {
 			System.err.println("Failed to load level.");
 			e.printStackTrace();
