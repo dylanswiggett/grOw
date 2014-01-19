@@ -83,12 +83,14 @@ public class Game {
 		if (playerSize > goalPlayerSize) {
 			playerSize = goalPlayerSize;
 			playerGrowthSpeed = 0;
+			// TODO: Stop whooshing sound
 		} else if (playerSize < goalPlayerSize) {
 			if (playerSize > (originalPlayerSize + goalPlayerSize) / 2)
 				playerGrowthSpeed -= .01;
 			else
 				playerGrowthSpeed += .01;
 			playerSize += playerGrowthSpeed;
+			// TODO: Scale whooshing sound relative to playerGrowthSpeed.
 		}
 		
 		// Gravity
@@ -112,6 +114,7 @@ public class Game {
 				goalPlayerSize += c.getValue();
 				originalPlayerSize = playerSize;
 				playerGrowthSpeed = .1f;
+				// TODO: Start whooshing sound
 			}
 		}
 		
