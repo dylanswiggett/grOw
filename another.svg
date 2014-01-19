@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="-22.474281"
-     inkscape:cy="472.88634"
+     inkscape:zoom="89.6"
+     inkscape:cx="127.35174"
+     inkscape:cy="466.19043"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -34,7 +34,9 @@
      inkscape:window-height="851"
      inkscape:window-x="0"
      inkscape:window-y="25"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
   <metadata
      id="metadata3219">
     <rdf:RDF>
@@ -69,9 +71,9 @@
        style="fill:#ff0000"
        id="rect3228"
        width="58.075275"
-       height="6.5063004"
+       height="4.2741575"
        x="133.72742"
-       y="575.60345" />
+       y="577.83557" />
     <rect
        style="fill:#ff0000"
        id="rect3230"
@@ -103,10 +105,10 @@
     <rect
        style="fill:#ff0000"
        id="rect3244"
-       width="8.0812206"
-       height="2.2728431"
+       width="9.0282383"
+       height="1.8309014"
        x="204.83382"
-       y="587.1922" />
+       y="587.63416" />
     <rect
        style="fill:#ff0000"
        id="rect3246"
@@ -375,7 +377,7 @@
          id="tspan3315-8-0-2"
          x="17.719482"
          y="545.70667"
-         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 10 || 10 || No way. I can't go back.</tspan></text>
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">sayP || 160 || 10 || 10 || No way. I can't go back.</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -412,15 +414,15 @@
        id="rect3756"
        width="2.4107144"
        height="1.25"
-       x="205.98213"
-       y="583.255" />
+       x="206.04527"
+       y="584.20203" />
     <rect
        style="fill:#ff0000"
        id="rect3758"
        width="1.7857143"
        height="1.3392857"
-       x="213.66071"
-       y="580.13" />
+       x="212.58742"
+       y="581.14014" />
     <text
        xml:space="preserve"
        style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -466,13 +468,6 @@
        y="572.80865" />
     <rect
        style="fill:#ff0000"
-       id="rect3799-8"
-       width="6.875"
-       height="44.375"
-       x="252.09822"
-       y="570.17462" />
-    <rect
-       style="fill:#ff0000"
        id="rect3819"
        width="2.1928365"
        height="3.5714285"
@@ -496,6 +491,385 @@
          id="tspan3315-8-0-4-2-2-4"
          x="244.16016"
          y="561.82275"
-         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 5 || 5 || Out of reach...</tspan></text>
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">sayP || 40 || 5 || 5 || Out of reach...</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="181.91071"
+       y="599.6416"
+       id="text3313-6-6-24-0"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-14-4"
+         x="181.91071"
+         y="599.6416"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 50 || 5 || Down the rabbit hole!!!</tspan></text>
+    <rect
+       style="fill:#ff0000"
+       id="rect3886"
+       width="45.535713"
+       height="2.1428571"
+       x="138.30357"
+       y="576.91577" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3888"
+       width="41.42857"
+       height="1.7857143"
+       x="145.71428"
+       y="575.75507" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3890"
+       width="21.517857"
+       height="1.4285715"
+       x="159.64285"
+       y="574.77289" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3892"
+       width="16.517857"
+       height="5.9821429"
+       x="164.28572"
+       y="572.7193" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-24.385288"
+       y="550.39423"
+       id="text3313-6-6-4-8"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-2-8"
+         x="-24.385288"
+         y="550.39423"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 20 || 1000 || Bad Chad. Stop that.</tspan></text>
+    <rect
+       style="fill:#ff0000"
+       id="rect3917-1"
+       width="2.9464285"
+       height="1.0714285"
+       x="59.24107"
+       y="551.68359" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3917-6"
+       width="2.9464285"
+       height="1.0714285"
+       x="59.24107"
+       y="553.68359" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3917-13"
+       width="2.9464285"
+       height="1.0714285"
+       x="59.24107"
+       y="555.68359" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3917-15"
+       width="2.9464285"
+       height="1.0714285"
+       x="59.24107"
+       y="557.68359" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3917-7"
+       width="2.9464285"
+       height="1.0714285"
+       x="59.24107"
+       y="559.68359" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3917-68"
+       width="2.9464285"
+       height="1.0714285"
+       x="59.24107"
+       y="561.68359" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3917-8"
+       width="2.9464285"
+       height="1.0714285"
+       x="59.24107"
+       y="563.68359" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3917-0"
+       width="2.9464285"
+       height="1.0714285"
+       x="59.24107"
+       y="549.68359" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4025"
+       width="1.1364216"
+       height="5.6821079"
+       x="287.9566"
+       y="559.02893" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4027"
+       width="6.6922603"
+       height="1.5625798"
+       x="287.9566"
+       y="563.52728" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4029"
+       width="6.6922607"
+       height="1.4994452"
+       x="287.9566"
+       y="558.27136" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4031"
+       width="1.4520942"
+       height="5.9346461"
+       x="293.19678"
+       y="558.93427" />
+    <rect
+       style="fill:#ffff00"
+       id="rect4033"
+       width="2.1307905"
+       height="1.6257143"
+       x="291.01865"
+       y="560.05493" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4025-2"
+       width="1.1364216"
+       height="5.6821079"
+       x="327.66821"
+       y="559.43933" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4027-3"
+       width="6.6922603"
+       height="1.5625798"
+       x="327.66821"
+       y="563.93768" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4029-5"
+       width="6.6922607"
+       height="1.4994452"
+       x="327.66821"
+       y="558.68176" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4031-4"
+       width="1.4520942"
+       height="5.9346461"
+       x="332.90839"
+       y="559.34467" />
+    <rect
+       style="fill:#ffff00"
+       id="rect4033-7"
+       width="1.0890707"
+       height="0.7733981"
+       x="332.05609"
+       y="562.51721" />
+    <rect
+       style="fill:#ffff00"
+       id="rect4033-7-7"
+       width="1.3731761"
+       height="1.120638"
+       x="330.05945"
+       y="560.56793" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4025-8"
+       width="1.1364216"
+       height="5.6821079"
+       x="271.22595"
+       y="558.90265" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4027-0"
+       width="6.6922603"
+       height="1.5625798"
+       x="271.22595"
+       y="563.401" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4029-56"
+       width="6.6922607"
+       height="1.4994452"
+       x="271.22595"
+       y="558.14508" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4031-0"
+       width="1.4520942"
+       height="5.9346461"
+       x="276.46613"
+       y="558.80798" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="284.86963"
+       y="568.13196"
+       id="text3313-6-6-5-1-0-0"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2-2-7"
+         x="284.86963"
+         y="568.13196"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 5 || 5 || What on earth...</tspan></text>
+    <rect
+       style="fill:#ff0000"
+       id="rect3799-8-9"
+       width="84.190781"
+       height="18.303572"
+       x="252.30093"
+       y="569.70142" />
+    <rect
+       style="fill:#ff0000"
+       id="rect3799-8-3"
+       width="84.190781"
+       height="2.2674"
+       x="336.30096"
+       y="569.70142" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4249"
+       width="75.824577"
+       height="18.877226"
+       x="341.81036"
+       y="571.34015" />
+    <rect
+       style="fill:#ff0000"
+       id="rect4251"
+       width="12.311234"
+       height="8.586297"
+       x="335.24438"
+       y="575.50708" />
+    <rect
+       style="fill:#ffff00"
+       id="rect4253"
+       width="0.88388348"
+       height="0.56821078"
+       x="337.01215"
+       y="572.79224" />
+    <rect
+       style="fill:#ffff00"
+       id="rect4255"
+       width="0.63134533"
+       height="0.44194174"
+       x="339.22186"
+       y="572.47656" />
+    <rect
+       style="fill:#ffff00"
+       id="rect4257"
+       width="1.0101526"
+       height="1.0101526"
+       x="340.48456"
+       y="573.80243" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="329.15448"
+       y="568.19507"
+       id="text3313-6-6-5-1-0-0-2"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2-2-7-7"
+         x="329.15448"
+         y="568.19507"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 5 || 5 || Are those coins?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="364.3204"
+       y="567.75311"
+       id="text3313-6-6-5-1-0-0-1"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2-2-7-0"
+         x="364.3204"
+         y="567.75311"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 5 || 5 || Floating coins?</tspan></text>
+    <rect
+       style="fill:#ffff00"
+       id="rect4298"
+       width="1.3889598"
+       height="1.3258252"
+       x="367.5061"
+       y="561.11237" />
+    <rect
+       style="fill:#ffff00"
+       id="rect4300"
+       width="0.94701803"
+       height="0.82074893"
+       x="361.66077"
+       y="562.65625" />
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="115.19621"
+       y="584.38971"
+       id="text3313-6-1"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-1"
+         x="115.19621"
+         y="584.38971"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || DO</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="115.51856"
+       y="585.4165"
+       id="text3313-6-1-5"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-1-4"
+         x="115.51856"
+         y="585.4165"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || NOT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="115.0498"
+       y="586.17542"
+       id="text3313-6-1-7"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-1-7"
+         x="115.0498"
+         y="586.17542"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || ENTE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="116.69636"
+       y="586.38751"
+       id="text3313-6-1-7-9"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-1-7-4"
+         x="116.69636"
+         y="586.38751"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">text || 20 || R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="361.26349"
+       y="563.83167"
+       id="text3313-6-6-5-1-0-0-1-1"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315-8-0-4-2-2-7-0-6"
+         x="361.26349"
+         y="563.83167"
+         style="font-size:1px;font-weight:normal;-inkscape-font-specification:Sans">say || 160 || 2 || 2 || So close.</tspan></text>
+    <rect
+       style="fill:#ff0000"
+       id="rect3758-1"
+       width="1.7857143"
+       height="0.89734399"
+       x="218.18398"
+       y="578.24664" />
   </g>
 </svg>
