@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 
+import sound.Sound;
 import svg.LevelLoader;
 
 public class Game {
@@ -55,6 +56,7 @@ public class Game {
 		if (onPlatform && (jumpTimeout == 1) && Keyboard.isKeyDown(Keyboard.KEY_SPACE)) {
 			playerVel = playerVel.add(JUMP.mult(playerSize));
 			jumpTimeout = JUMP_TIMEOUT;
+			Sound.JUMP.playAsSoundEffect(1f, 1f, false);
 		}
 		if (jumpTimeout > 1)
 			jumpTimeout--;
