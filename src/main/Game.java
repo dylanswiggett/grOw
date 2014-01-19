@@ -13,7 +13,7 @@ public class Game {
 	private static final Vec2 JUMP 	  = new Vec2(0, 1);
 	private static final float MOVE_SPEED = .1f;
 	private static final float VERT_DAMPING = .97f;
-	private static final float HORZ_DAMPING = .9f;
+	private static final float HORZ_DAMPING = .8f;
 	
 	private static final int JUMP_TIMEOUT = 30;
 	
@@ -72,6 +72,8 @@ public class Game {
 		playerVel.x *= HORZ_DAMPING;
 		playerPos = playerPos.add(playerVel);
 		
+		Vec2 nextPlayerVel = new Vec2(playerVel);
+		
 		/*
 		 * Handle collisions with platforms
 		 */
@@ -81,30 +83,42 @@ public class Game {
 				playerPos.x < (plat.getPos().x + plat.getDim().x) 	&& 
 				(playerPos.y + playerSize) > plat.getPos().y 		&&
 				playerPos.y < (plat.getPos().y + plat.getDim().y)) {
-				float left   = (playerPos.x + playerSize - plat.getPos().x) / playerVel.x;
-				float right  = (playerPos.x - plat.getPos().x - plat.getDim().x) / playerVel.x;
-				float bottom = (playerPos.y + playerSize - plat.getPos().y) / playerVel.y;
-				float top    = (playerPos.y - plat.getPos().y - plat.getDim().y) / playerVel.y;
+				
+				float left   = (playerPos.x + playerSize - plat.getPos().x);
+				float right  = (playerPos.x - plat.getPos().x - plat.getDim().x);
+				float bottom = (playerPos.y + playerSize - plat.getPos().y);
+				float top    = (playerPos.y - plat.getPos().y - plat.getDim().y);
+				
+				if (playerVel.x != 0) {
+					left   /= playerVel.x;
+					right  /= playerVel.x;
+				}
+				if (playerVel.y != 0) {
+					bottom /= playerVel.y;
+					top    /= playerVel.y;
+				}
 				
 				if (left > 0 && (left < right  || right  < 0) &&
 								(left < top    || top    < 0) &&
 								(left < bottom || bottom < 0)) {
-					playerVel.x = 0;
-					playerPos.x = plat.getPos().x - playerSize;
+					nextPlayerVel.x = 0;
+					playerPos.x = plat.getPos().x - playerSize - .5f;
 				} else if (right > 0 && (right < top    || top < 0) &&
 										(right < bottom || bottom < 0)) {
-					playerVel.x = 0;
-					playerPos.x = plat.getPos().x + plat.getDim().x;
+					nextPlayerVel.x = 0;
+					playerPos.x = plat.getPos().x + plat.getDim().x + .5f;
 				} else if (top > 0 && (top < bottom || bottom < 0)) {
-					playerVel.y = 0;
+					nextPlayerVel.y = 0;
 					playerPos.y = plat.getPos().y + plat.getDim().y;
 					onPlatform = true;
 				} else {
-					playerVel.y = 0;
+					nextPlayerVel.y = 0;
 					playerPos.y = plat.getPos().y - playerSize;
 				}
 			}
 		}
+		
+		playerVel = nextPlayerVel;
 	}
 	
 	public void draw() {

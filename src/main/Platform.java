@@ -10,6 +10,7 @@ public class Platform implements Drawable {
 	public Platform(Vec2 pos, Vec2 dim) {
 		this.pos = pos;
 		this.dim = dim;
+		System.out.println(dim);
 	}
 	
 	public Vec2 getPos() {
