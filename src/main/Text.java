@@ -27,12 +27,6 @@ public class Text implements Drawable {
 
 	@Override
 	public void draw() {
-		//GL11.glEnable(GL11.GL_TEXTURE_2D);
-		//GL11.glPushMatrix();
-		//GL11.glTranslatef(-pos.x + Init.WIDTH / 2, -pos.y + Init.HEIGHT / 2, 0);
-		//Fonts.getFont(Fonts.ABSENDER, size).drawString(pos.x, pos.y, string, Color.white);
-		//GL11.glPopMatrix();
-		//GL11.glDisable(GL11.GL_TEXTURE_2D);
 		Fonts.draw(Fonts.ABSENDER, (int) size, pos, string, Color.white);
 	}
 	

@@ -181,13 +181,7 @@ public class Game {
 		playerSprite.setDrawDim(new Vec2(playerSize, playerSize));
 		playerSprite.draw();
 		
-		GL11.glPopMatrix();
-		GL11.glPushMatrix();
-		
-		GL11.glTranslatef(-playerPos.x + w / 2,
-				  -playerPos.y + h / 2, 0);
-		Fonts.draw(Fonts.ABSENDER, 70, playerPos, "TEST TEST TEST", Color.yellow);
-		
+		Fonts.draw(Fonts.ABSENDER, 70, new Vec2(playerPos.x, -playerPos.y), "TEST TEST TEST", Color.yellow);
 		GL11.glPopMatrix();
 	}
 }
