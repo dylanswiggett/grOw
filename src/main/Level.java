@@ -33,6 +33,10 @@ public class Level implements Drawable{
 		drawables.remove(c);
 	}
 	
+	public void addText(Text text) {
+		drawables.add(text);
+	}
+	
 	public ArrayList<Platform> getPlatforms() {
 		return platforms;
 	}
