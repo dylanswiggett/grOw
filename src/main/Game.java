@@ -148,6 +148,7 @@ public class Game {
 			}
 			if (Keyboard.isKeyDown(Keyboard.KEY_F)) {
 				playerVel.y = playerSize / 2;
+				Sound.play(Sound.LAND);
 			}
 			if (Keyboard.isKeyDown(Keyboard.KEY_K)){
 				playerDead = true;
