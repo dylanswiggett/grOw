@@ -25,42 +25,42 @@ public class Game {
 	private static final int JUMP_TIMEOUT = 30;
 	private static final float GROWTH_RATE = .001f;
 	private static final float GROWTH_SCALE = .2f;
-	
+
 	private static TexturedRect background;
 	private static Shader bgShader = new Shader("assets/shaders/basic.vert", "assets/shaders/background.frag");
 	private static float bgColor = .1f;
 	private static float bgVel = 0f;
-	
+
 	private int w, h;
-	
+
 	private Vec2 playerPos, playerVel;
 	private float playerSize;
 	private float playerGrowthSpeed = 0;
 	private float originalPlayerSize;
 	private float goalPlayerSize;
 	private Player playerSprite;
-	
+
 	private Level curLvl;
-	
+
 	private boolean onPlatform = false;
 	private int jumpTimeout = 1;
-	
+
 	private int counter = 1;
-	
+
 	// If the player is saying something, it will be said for this many more frames.
 	private int sayCounter;
 	private String saying;
-	
+
 	public Game(int w, int h) {
 		this.w = w;
 		this.h = h;
-		
+
 		playerSprite = //new ColorRect(playerPos, new Vec2(playerSize, playerSize), .8f, .8f, 1);
 				new Player(playerPos, new Vec2(playerSize, playerSize));
-				
+
 		background =
 				new TexturedRect(new Vec2(0, 0), new Vec2(w, h), "assets/textures/background.png", 1, 1, 1);
-		
+
 		try {
 			curLvl = LevelLoader.load("another.svg");
 		} catch (IOException e) {
@@ -68,14 +68,14 @@ public class Game {
 			e.printStackTrace();
 			System.exit(1);
 		}
-		
+
 		playerPos = curLvl.getPlayerInitialPosition();
 		playerVel = new Vec2(0, 0);
 		playerSize = curLvl.getPlayerInitialDimensions().y;
 		goalPlayerSize = playerSize;
 		System.out.println(playerPos.x);
 	}
-	
+
 	public void step() {
 		/*
 		 * Handle controls
@@ -87,7 +87,7 @@ public class Game {
 		}
 		if (jumpTimeout > 1)
 			jumpTimeout--;
-		
+
 		if (Keyboard.isKeyDown(Keyboard.KEY_LEFT) && !Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) {
 			playerVel = playerVel.add(new Vec2(-MOVE_SPEED * playerSize, 0));
 			playerSprite.setFacingRight(false);
@@ -98,12 +98,14 @@ public class Game {
 		if (Keyboard.isKeyDown(Keyboard.KEY_F)) {
 			playerVel.y = playerSize / 2;
 		}
-		
+
 		// Animation
-		
-		 // Always fall if you're going down.
+
+		// Always fall if you're going down.
 		if (playerVel.y < -0.01 * playerSize) {
-			playerSprite.setAnimation(Player.Animation.FALLING);
+			if (playerSprite.getAnimation() != Player.Animation.FALLING) {
+				playerSprite.setAnimation(Player.Animation.FALLING);
+			}
 		}
 		// Land if you just stopped falling.
 		else if(playerSprite.getAnimation() == Player.Animation.FALLING) {
@@ -113,15 +115,15 @@ public class Game {
 		else if (playerSprite.getAnimation() == Player.Animation.LANDING && (Keyboard.isKeyDown(Keyboard.KEY_LEFT) ^ Keyboard.isKeyDown(Keyboard.KEY_RIGHT))) {
 			playerSprite.setAnimation(Player.Animation.WALKING);
 		}
-		
+
 		playerSprite.step();
-		
+
 		if (playerSprite.getAnimation() == Player.Animation.WALKING && !(Keyboard.isKeyDown(Keyboard.KEY_LEFT) ^ Keyboard.isKeyDown(Keyboard.KEY_RIGHT))) {
 			playerSprite.standStill();
 		}
-		
+
 		// Growing
-		
+
 		if (playerSize >= goalPlayerSize) {
 			playerSize = goalPlayerSize;
 			playerGrowthSpeed = 0;
@@ -134,23 +136,23 @@ public class Game {
 			playerSize += playerGrowthSpeed;
 			Sound.setVolume(Sound.WHOOSH, playerGrowthSpeed);
 		}
-		
+
 		// Gravity
 		playerVel = playerVel.add(GRAVITY.mult(playerSize));
 		playerVel.y *= VERT_DAMPING;
 		playerVel.x *= HORZ_DAMPING;
 		playerPos = playerPos.add(playerVel);
-		
+
 		Vec2 nextPlayerVel = new Vec2(playerVel);
-		
+
 		ArrayList<Coin> coins = curLvl.getCoins();
-		
+
 		for (int i = 0; i < coins.size(); i++) {
 			Coin c = coins.get(i);
 			if ((playerPos.x + playerSize) > c.getPos().x 		&&
-				playerPos.x < (c.getPos().x + c.getDim().x) 	&& 
-				(playerPos.y + playerSize) > c.getPos().y 		&&
-				playerPos.y < (c.getPos().y + c.getDim().y)) {
+					playerPos.x < (c.getPos().x + c.getDim().x) 	&& 
+					(playerPos.y + playerSize) > c.getPos().y 		&&
+					playerPos.y < (c.getPos().y + c.getDim().y)) {
 				System.out.println("COIN GET");
 				curLvl.removeCoin(c);
 				goalPlayerSize += c.getValue() * GROWTH_SCALE;
@@ -159,37 +161,37 @@ public class Game {
 				Sound.play(Sound.WHOOSH);
 			}
 		}
-		
+
 		ArrayList<SayBubble> bubbles = curLvl.getBubbles();
-		
+
 		for (int i = 0; i < bubbles.size(); i++) {
 			SayBubble b = bubbles.get(i);
 			if ((playerPos.x + playerSize) > b.getPos().x 		&&
-				playerPos.x < (b.getPos().x + b.getDim().x) 	&& 
-				(playerPos.y + playerSize) > b.getPos().y 		&&
-				playerPos.y < (b.getPos().y + b.getDim().y)) {
+					playerPos.x < (b.getPos().x + b.getDim().x) 	&& 
+					(playerPos.y + playerSize) > b.getPos().y 		&&
+					playerPos.y < (b.getPos().y + b.getDim().y)) {
 				if (!b.isPerm())
 					curLvl.removeBubble(b);
 				saying = b.getMessage();
 				sayCounter = b.getDur();
 			}
 		}
-		
+
 		/*
 		 * Handle collisions with platforms
 		 */
 		onPlatform = false;
 		for (Platform plat : curLvl.getPlatforms()) {
 			if ((playerPos.x + playerSize) > plat.getPos().x 		&&
-				playerPos.x < (plat.getPos().x + plat.getDim().x) 	&& 
-				(playerPos.y + playerSize) > plat.getPos().y 		&&
-				playerPos.y < (plat.getPos().y + plat.getDim().y)) {
-				
+					playerPos.x < (plat.getPos().x + plat.getDim().x) 	&& 
+					(playerPos.y + playerSize) > plat.getPos().y 		&&
+					playerPos.y < (plat.getPos().y + plat.getDim().y)) {
+
 				float left   = (playerPos.x + playerSize - plat.getPos().x);
 				float right  = (playerPos.x - plat.getPos().x - plat.getDim().x);
 				float bottom = (playerPos.y + playerSize - plat.getPos().y);
 				float top    = (playerPos.y - plat.getPos().y - plat.getDim().y);
-				
+
 				if (playerVel.x != 0) {
 					left   /= playerVel.x;
 					right  /= playerVel.x;
@@ -198,14 +200,14 @@ public class Game {
 					bottom /= playerVel.y;
 					top    /= playerVel.y;
 				}
-				
+
 				if (left > 0 && (left < right  || right  < 0) &&
-								(left < top    || top    < 0) &&
-								(left < bottom || bottom < 0)) {
+						(left < top    || top    < 0) &&
+						(left < bottom || bottom < 0)) {
 					nextPlayerVel.x = 0;
 					playerPos.x = plat.getPos().x - playerSize * 1f;
 				} else if (right > 0 && (right < top    || top < 0) &&
-										(right < bottom || bottom < 0)) {
+						(right < bottom || bottom < 0)) {
 					nextPlayerVel.x = 0;
 					playerPos.x = plat.getPos().x + plat.getDim().x * 1.00f;
 				} else if (top > 0 && (top < bottom || bottom < 0)) {
@@ -221,10 +223,10 @@ public class Game {
 				}
 			}
 		}
-		
+
 		playerVel = nextPlayerVel;
 	}
-	
+
 	public void draw() {
 		bgShader.enable();
 		bgShader.Uniform1f("time", counter++);
@@ -239,31 +241,31 @@ public class Game {
 		counter = (int) (1000 * Math.random());
 		background.draw();
 		bgShader.disable();
-		
+
 		float scale = VISIBLE_PLAYER_HEIGHT / playerSize;
-		
+
 		GL11.glPushMatrix();
-		
+
 		Vec2 cameraOffset = new Vec2(-playerPos.x * scale + w / 2,
-				  -playerPos.y * scale + h / 2);
-		
+				-playerPos.y * scale + h / 2);
+
 		GL11.glTranslatef(cameraOffset.x, cameraOffset.y, 0);
 		GL11.glScalef(scale, scale, 0);
-		
+
 		// Used for shader
 		Platform.cameraPos = cameraOffset;
-		
+
 		curLvl.draw();
-		
+
 		playerSprite.setPos(playerPos);
 		playerSprite.setDim(new Vec2(playerSize, playerSize));
 		playerSprite.draw();
-				
+
 		GL11.glPopMatrix();
 		GL11.glPushMatrix();
-		
+
 		GL11.glTranslatef(-playerPos.x + w / 2,
-						  -playerPos.y + h / 2, 0);
+				-playerPos.y + h / 2, 0);
 		if (sayCounter > 0) {
 			new TextBubble(playerPos.add(new Vec2(playerSize * scale, playerSize * scale)),
 					saying).draw();
