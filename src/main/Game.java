@@ -65,6 +65,9 @@ public class Game {
 		if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)) {
 			playerVel = playerVel.add(new Vec2(MOVE_SPEED * playerSize, 0));
 		}
+		if (Keyboard.isKeyDown(Keyboard.KEY_F)) {
+			playerVel.y = playerSize / 2;
+		}
 		
 		// Gravity
 		playerVel = playerVel.add(GRAVITY.mult(playerSize));
