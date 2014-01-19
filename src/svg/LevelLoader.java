@@ -11,6 +11,7 @@ import main.Coin;
 import main.Level;
 import main.Platform;
 import main.SayBubble;
+import main.Spike;
 import main.Text;
 import main.Vec2;
 
@@ -59,6 +60,13 @@ public class LevelLoader {
 				} else if (style.equals("fill:#0000ff")) {
 					level.addCoin(new Coin(pos, dim.y, true));
 					System.out.println("Anti Coin:");
+					System.out.println("\twidth: " + width);
+					System.out.println("\theight: " + height);
+					System.out.println("\tx: " + x);
+					System.out.println("\ty: " + y);
+				} else if (style.equals("fill:#00ff00")) {
+					level.addSpike(new Spike(pos, dim));
+					System.out.println("Spike:");
 					System.out.println("\twidth: " + width);
 					System.out.println("\theight: " + height);
 					System.out.println("\tx: " + x);
