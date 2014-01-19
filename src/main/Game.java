@@ -186,10 +186,15 @@ public class Game {
 		playerSprite.setPos(playerPos);
 		playerSprite.setDim(new Vec2(playerSize, playerSize));
 		playerSprite.draw();
+				
+		GL11.glPopMatrix();
+		GL11.glPushMatrix();
 		
-		new TextBubble(playerPos.add(new Vec2(playerSize, playerSize)), "TESTING TESTING" + counter++).draw();
+		GL11.glTranslatef(-playerPos.x + w / 2,
+						  -playerPos.y + h / 2, 0);
+		new TextBubble(playerPos.add(new Vec2(playerSize * scale, playerSize * scale)),
+				"This is a message to you, the player.".substring(0, (counter++ / 10) % 38)).draw();
 		
-		Fonts.draw(Fonts.ABSENDER, 70, new Vec2(playerPos.x, -playerPos.y), "TEST TEST TEST", Color.yellow);
 		GL11.glPopMatrix();
 	}
 }
