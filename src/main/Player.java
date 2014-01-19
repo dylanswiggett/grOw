@@ -10,9 +10,13 @@ import org.newdawn.slick.util.ResourceLoader;
 
 public class Player extends TexturedRect {
 
+	// Lower is faster!
+	private static final int WALK_CYCLE_SPEED = 5;
+	
 	private Texture[] textures;
 	private int walkCycleIndex;
-	private boolean goinRight;
+	private int walkCycleCounter;
+	private boolean movingRight;
 	
 	public Player(Vec2 pos, Vec2 dim) {
 		super(pos, dim);
@@ -22,16 +26,15 @@ public class Player extends TexturedRect {
 			try {
 				textures[i] = TextureLoader.getTexture("PNG",
 						ResourceLoader.getResourceAsStream("assets/textures/playerWalk" + i + ".png"));
-				textures[0].bind();
-				GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MIN_FILTER,
-		                 GL11.GL_NONE );
-				GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NONE );
+				textures[i].bind();
+				GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
+				GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 			walkCycleIndex = 0;
 			step();
-			goinRight = false;
+			movingRight = true;
 			r = 1;
 			g = 1;
 			b = 1;
@@ -39,16 +42,25 @@ public class Player extends TexturedRect {
 	}
 	
 	public void step() {
-		walkCycleIndex = (walkCycleIndex + 1) % textures.length;
-		texture = textures[walkCycleIndex];
+		walkCycleCounter++;
+		if (walkCycleCounter > 5) {
+			walkCycleIndex = (walkCycleIndex + 1) % textures.length;
+			texture = textures[walkCycleIndex];
+			walkCycleCounter = 0;
+		}
 	}
 	
-	public void setGoinRight(boolean goinRight) {
-		this.goinRight = goinRight;
+	public void standStill() {
+		walkCycleIndex = 0;
+		texture = textures[0];
+	}
+	
+	public void setMovingRight(boolean movingRight) {
+		this.movingRight = movingRight;
 	}
 	
 	public void draw() {
-		if (goinRight) {
+		if (movingRight) {
 			super.draw();
 		} else {
 			GL11.glEnable(GL11.GL_TEXTURE_2D);
