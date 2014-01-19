@@ -10,7 +10,7 @@ import org.newdawn.slick.util.ResourceLoader;
 
 public class Player extends TexturedRect {
 
-	public enum Animation {WALKING, FALLING, LANDING};
+	public enum Animation {WALKING, FALLING, LANDING, JUMPING};
 	// Lower is faster!
 	private static final int WALK_CYCLE_SPEED = 5;
 
@@ -62,6 +62,18 @@ public class Player extends TexturedRect {
 				e.printStackTrace();
 			}
 		}
+		textures[Animation.JUMPING.ordinal()] = new Texture[2];
+		for (int i = 0; i < textures[Animation.JUMPING.ordinal()].length; i++) {
+			try {
+				textures[Animation.JUMPING.ordinal()][i] = TextureLoader.getTexture("PNG",
+						ResourceLoader.getResourceAsStream("assets/textures/playerJump" + i + ".png"));
+				textures[Animation.JUMPING.ordinal()][i].bind();
+				GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
+				GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 
 		setAnimation(Animation.WALKING);
 		facingRight = true;
@@ -93,9 +105,17 @@ public class Player extends TexturedRect {
 				if (cycleIndex < textures[animation.ordinal()].length) {
 					texture = textures[animation.ordinal()][cycleIndex];
 				} else {
-					animation = Animation.WALKING;
+					setAnimation(Animation.WALKING);
 				}
 				cycleCounter = 0;
+			}
+		} else if (animation == Animation.JUMPING) {
+			cycleCounter++;
+			if (cycleCounter > 6) {
+				cycleIndex++;
+				if (cycleIndex < textures[animation.ordinal()].length) {
+					texture = textures[animation.ordinal()][cycleIndex];
+				}
 			}
 		}
 	}

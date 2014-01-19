@@ -107,6 +107,12 @@ public class Game {
 				playerSprite.setAnimation(Player.Animation.FALLING);
 			}
 		}
+		// Always jump if you're going up.
+		else if (playerVel.y > 0.01 * playerSize) {
+			if (playerSprite.getAnimation() != Player.Animation.JUMPING) {
+				playerSprite.setAnimation(Player.Animation.JUMPING);
+			}
+		}
 		// Land if you just stopped falling.
 		else if(playerSprite.getAnimation() == Player.Animation.FALLING) {
 			playerSprite.setAnimation(Player.Animation.LANDING);
