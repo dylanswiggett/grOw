@@ -15,6 +15,7 @@ public class Level implements Drawable{
 	public Level() {
 		drawables = new ArrayList<Drawable>();
 		platforms = new ArrayList<Platform>();
+		coins = new ArrayList<Coin>();
 	}
 	
 	public void addPlatform(Platform p) {

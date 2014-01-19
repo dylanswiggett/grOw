@@ -134,11 +134,11 @@ public class Game {
 						  -playerPos.y * scale + h / 2, 0);
 		GL11.glScalef(scale, scale, 0);
 		
+		curLvl.draw();
+		
 		playerSprite.setDrawPos(playerPos);
 		playerSprite.setDrawDim(new Vec2(playerSize, playerSize));
 		playerSprite.draw();
-		
-		curLvl.draw();
 		
 		GL11.glPopMatrix();
 	}

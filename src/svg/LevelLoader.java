@@ -7,6 +7,7 @@ import javax.xml.parsers.*;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
+import main.Coin;
 import main.Level;
 import main.Platform;
 import main.Vec2;
@@ -42,6 +43,13 @@ public class LevelLoader {
 					level.setPlayerInitialPosition(pos);
 					level.setPlayerInitialDimensions(dim);
 					System.out.println("Player:");
+					System.out.println("\twidth: " + width);
+					System.out.println("\theight: " + height);
+					System.out.println("\tx: " + x);
+					System.out.println("\ty: " + y);
+				} else if (style.equals("fill:#ffff00")) {
+					level.addCoin(new Coin(pos, dim.y));
+					System.out.println("Coin:");
 					System.out.println("\twidth: " + width);
 					System.out.println("\theight: " + height);
 					System.out.println("\tx: " + x);
