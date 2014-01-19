@@ -63,9 +63,7 @@ public class Player extends TexturedRect {
 			}
 		}
 
-		animation = Animation.WALKING;
-		cycleIndex = 0;
-		texture = textures[animation.ordinal()][0];
+		setAnimation(Animation.WALKING);
 		facingRight = true;
 		r = g = b = 1;
 	}
@@ -76,6 +74,8 @@ public class Player extends TexturedRect {
 
 	public void setAnimation(Animation animation) {
 		this.animation = animation;
+		cycleIndex = 0;
+		texture = textures[animation.ordinal()][0];
 	}
 
 	public void step() {

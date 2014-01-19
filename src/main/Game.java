@@ -100,8 +100,8 @@ public class Game {
 		
 		if (playerVel.y < -0.01 * playerSize) {
 			playerSprite.setAnimation(Player.Animation.FALLING);
-		} else {
-			playerSprite.setAnimation(Player.Animation.WALKING);
+		} else if(playerSprite.getAnimation() == Player.Animation.FALLING) {
+			playerSprite.setAnimation(Player.Animation.LANDING);
 		}
 		
 		playerSprite.step();
