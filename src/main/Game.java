@@ -26,6 +26,8 @@ public class Game {
 	private static final float GROWTH_RATE = .001f;
 	private static final float GROWTH_SCALE = .2f;
 	
+	private static TexturedRect background;
+	
 	private int w, h;
 	
 	private Vec2 playerPos, playerVel;
@@ -49,6 +51,9 @@ public class Game {
 		playerSprite = //new ColorRect(playerPos, new Vec2(playerSize, playerSize), .8f, .8f, 1);
 				new TexturedRect(playerPos, new Vec2(playerSize, playerSize), "assets/textures/player.png", 1, 1, 1);
 				
+		background =
+				new TexturedRect(new Vec2(0, 0), new Vec2(w, h), "background.png", 1, 1, 1);
+		
 		try {
 			curLvl = LevelLoader.load("another.svg");
 		} catch (IOException e) {
@@ -179,39 +184,12 @@ public class Game {
 		playerVel = nextPlayerVel;
 	}
 	
-	private static Texture backgroundTexture;
-	static {
-		try {
-			backgroundTexture = TextureLoader.getTexture("PNG", ResourceLoader.getResourceAsStream("background.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		backgroundTexture.bind();
-		GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST );
-		GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST );
-	}
-	
 	public void draw() {
-		GL11.glEnable(GL11.GL_TEXTURE_2D);
-		new Color(1f, 1f, 1f).bind();
-		backgroundTexture.bind();
-		GL11.glBegin(GL11.GL_QUADS);
-		{
-			GL11.glTexCoord2f(0, 0);
-			GL11.glVertex2f(0, 0);
-			GL11.glTexCoord2f(0, 1);
-			GL11.glVertex2f(0, 600);
-			GL11.glTexCoord2f(1, 1);
-			GL11.glVertex2f(800, 600);
-			GL11.glTexCoord2f(1, 0);
-			GL11.glVertex2f(800, 0);
-		}
-		GL11.glEnd();
-		GL11.glDisable(GL11.GL_TEXTURE_2D);
-		
-		GL11.glPushMatrix();
+		background.draw();
 		
 		float scale = VISIBLE_PLAYER_HEIGHT / playerSize;
+		
+		GL11.glPushMatrix();
 		
 		GL11.glTranslatef(-playerPos.x * scale + w / 2,
 						  -playerPos.y * scale + h / 2, 0);
