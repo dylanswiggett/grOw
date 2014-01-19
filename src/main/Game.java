@@ -13,8 +13,8 @@ import text.Fonts;
 
 public class Game {
 	// All of these values are scaled by the player's current size.
-	private static final Vec2 GRAVITY = new Vec2(0, -.05);
-	private static final Vec2 JUMP 	  = new Vec2(0, 1);
+	private static final Vec2 GRAVITY = new Vec2(0, -.03);
+	private static final Vec2 JUMP 	  = new Vec2(0, .8);
 	private static final float MOVE_SPEED = .1f;
 	private static final float VERT_DAMPING = .97f;
 	private static final float HORZ_DAMPING = .8f;
@@ -45,7 +45,7 @@ public class Game {
 				new TexturedRect(playerPos, new Vec2(playerSize, playerSize), "assets/textures/player.png", 1, 1, 1);
 				
 		try {
-			curLvl = LevelLoader.load("test2.svg");
+			curLvl = LevelLoader.load("test3.svg");
 		} catch (IOException e) {
 			System.err.println("Failed to load level.");
 			e.printStackTrace();
@@ -149,11 +149,11 @@ public class Game {
 								(left < top    || top    < 0) &&
 								(left < bottom || bottom < 0)) {
 					nextPlayerVel.x = 0;
-					playerPos.x = plat.getPos().x - playerSize - .5f;
+					playerPos.x = plat.getPos().x - playerSize * 1.01f;
 				} else if (right > 0 && (right < top    || top < 0) &&
 										(right < bottom || bottom < 0)) {
 					nextPlayerVel.x = 0;
-					playerPos.x = plat.getPos().x + plat.getDim().x + .5f;
+					playerPos.x = plat.getPos().x + plat.getDim().x * 1.01f;
 				} else if (top > 0 && (top < bottom || bottom < 0)) {
 					if (playerVel.y < 2 * GRAVITY.y * playerSize)
 						Sound.LAND.playAsSoundEffect(1f, 1f, false);
@@ -193,7 +193,7 @@ public class Game {
 		GL11.glTranslatef(-playerPos.x + w / 2,
 						  -playerPos.y + h / 2, 0);
 		new TextBubble(playerPos.add(new Vec2(playerSize * scale, playerSize * scale)),
-				"This is a message to you, the player.".substring(0, (counter++ / 10) % 38)).draw();
+				"Hello, Mr. Player!".substring(0, (counter++ / 10) % 19)).draw();
 		
 		GL11.glPopMatrix();
 	}
