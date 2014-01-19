@@ -20,7 +20,7 @@ public class Game {
 	private static final float HORZ_DAMPING = .8f;
 	private static final int VISIBLE_PLAYER_HEIGHT = 40;
 	private static final int JUMP_TIMEOUT = 30;
-	private static final float GROWTH_RATE = .01f;
+	private static final float GROWTH_RATE = .001f;
 	private static final float GROWTH_SCALE = .1f;
 	
 	private int w, h;
