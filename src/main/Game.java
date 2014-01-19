@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 import org.newdawn.slick.Color;
+import org.newdawn.slick.opengl.Texture;
+import org.newdawn.slick.opengl.TextureLoader;
+import org.newdawn.slick.util.ResourceLoader;
 
 import sound.Sound;
 import svg.LevelLoader;
@@ -176,7 +179,35 @@ public class Game {
 		playerVel = nextPlayerVel;
 	}
 	
+	private static Texture backgroundTexture;
+	static {
+		try {
+			backgroundTexture = TextureLoader.getTexture("PNG", ResourceLoader.getResourceAsStream("background.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		backgroundTexture.bind();
+		GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST );
+		GL11.glTexParameterf(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST );
+	}
+	
 	public void draw() {
+		GL11.glEnable(GL11.GL_TEXTURE_2D);
+		new Color(1f, 1f, 1f).bind();
+		backgroundTexture.bind();
+		GL11.glBegin(GL11.GL_QUADS);
+		{
+			GL11.glTexCoord2f(0, 0);
+			GL11.glVertex2f(0, 0);
+			GL11.glTexCoord2f(0, 1);
+			GL11.glVertex2f(0, 600);
+			GL11.glTexCoord2f(1, 1);
+			GL11.glVertex2f(800, 600);
+			GL11.glTexCoord2f(1, 0);
+			GL11.glVertex2f(800, 0);
+		}
+		GL11.glEnd();
+		GL11.glDisable(GL11.GL_TEXTURE_2D);
 		
 		GL11.glPushMatrix();
 		
