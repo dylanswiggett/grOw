@@ -9,8 +9,8 @@ import text.Fonts;
 public class TextBubble implements Drawable{
 	
 	private static final Font FONT = Fonts.MONOFONTO;
-	private static final float WIDTH = 0.25f;
-	private static final int TEXT_DIM = 30;
+	private static final float WIDTH = 0.5f;
+	private static final int TEXT_DIM = 15;
 	private static final int BUBBLE_DIM = 48;
 	private static final int FROM_SIDES = 15;
 	private static final int FROM_BOTTOM = 39;
@@ -49,7 +49,7 @@ public class TextBubble implements Drawable{
 		RIGHT.draw();
 		LEFT.draw();
 		Fonts.draw(FONT, TEXT_DIM, new Vec2(FROM_SIDES + pos.x, - FROM_BOTTOM - pos.y),
-				text, Color.black);
+				text, Color.black, 4);
 	}
 
 }

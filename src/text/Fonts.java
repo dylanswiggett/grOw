@@ -60,10 +60,10 @@ public class Fonts {
 		}
 	}
 	
-	public static void draw(Font font, int size, Vec2 pos, String text, Color color) {
+	public static void draw(Font font, float size, Vec2 pos, String text, Color color, float scale) {
 		GL11.glPushMatrix();
 		GL11.glTranslatef(pos.x, -pos.y, 0);
-		GL11.glScalef(0.5f, -0.5f, 0);
+		GL11.glScalef(.25f * scale, -.25f * scale, 0);
 		getFont(font, size).drawString(0, 0, text, color);
 		GL11.glPopMatrix();
 	}

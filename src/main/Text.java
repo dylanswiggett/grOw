@@ -27,7 +27,10 @@ public class Text implements Drawable {
 
 	@Override
 	public void draw() {
-		Fonts.draw(Fonts.ABSENDER, (int) size, pos, string, Color.white);
+		GL11.glPushMatrix();
+//		GL11.glScalef(.25f, .25f, 0);
+		Fonts.draw(Fonts.ABSENDER, size, pos, string, Color.white, .25f);
+		GL11.glPopMatrix();
 	}
 	
 }

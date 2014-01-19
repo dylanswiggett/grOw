@@ -14,7 +14,7 @@
    id="svg3214"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 6">
+   sodipodi:docname="another.svg">
   <defs
      id="defs3216" />
   <sodipodi:namedview
@@ -70,8 +70,8 @@
        id="rect3226"
        width="1.5152289"
        height="1.3889598"
-       x="129.4258"
-       y="584.66156" />
+       x="122.73354"
+       y="584.409" />
     <rect
        style="fill:#ff0000"
        id="rect3228"
@@ -105,8 +105,8 @@
        id="rect3242"
        width="19.824244"
        height="2.9041886"
-       x="219.07683"
-       y="574.56" />
+       x="219.70818"
+       y="576.45404" />
     <rect
        style="fill:#ff0000"
        id="rect3244"
@@ -126,42 +126,54 @@
        id="rect3248"
        width="2.7779195"
        height="1.1364216"
-       x="212.2583"
-       y="594.38428" />
+       x="212.76338"
+       y="593.62665" />
     <rect
        style="fill:#ff0000"
        id="rect3250"
        width="1.8940361"
        height="0.75761443"
-       x="203.04066"
-       y="596.90967" />
+       x="207.71262"
+       y="596.15204" />
     <rect
        style="fill:#ff0000"
        id="rect3254"
        width="1.0101526"
        height="0.50507629"
-       x="197.48482"
-       y="598.55115" />
+       x="204.05081"
+       y="597.79352" />
     <rect
        style="fill:#ffff00"
        id="rect3256"
-       width="0.63134533"
-       height="0.63134533"
-       x="221.34967"
-       y="588.70215" />
+       width="3.0304577"
+       height="3.409265"
+       x="222.8649"
+       y="582.89368" />
     <rect
        style="fill:#ffff00"
        id="rect3258"
-       width="1.5152289"
-       height="1.0101526"
-       x="210.74307"
-       y="582.00989" />
+       width="4.9244938"
+       height="4.4194174"
+       x="210.99562"
+       y="573.5498" />
     <rect
        style="fill:#ffff00"
        id="rect3260"
-       width="1.5152289"
-       height="1.1364216"
-       x="226.77925"
-       y="572.16089" />
+       width="10.85914"
+       height="12.500638"
+       x="228.79958"
+       y="553.47302" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125.99999905%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="114.65232"
+       y="586.93445"
+       id="text3313"
+       sodipodi:linespacing="126%"><tspan
+         sodipodi:role="line"
+         id="tspan3315"
+         x="114.65232"
+         y="586.93445"
+         style="font-size:8px;font-weight:normal;-inkscape-font-specification:Sans">Level</tspan></text>
   </g>
 </svg>

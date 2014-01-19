@@ -21,7 +21,7 @@ public class Game {
 	private static final int VISIBLE_PLAYER_HEIGHT = 40;
 	private static final int JUMP_TIMEOUT = 30;
 	private static final float GROWTH_RATE = .001f;
-	private static final float GROWTH_SCALE = .1f;
+	private static final float GROWTH_SCALE = .2f;
 	
 	private int w, h;
 	
@@ -198,7 +198,7 @@ public class Game {
 		GL11.glTranslatef(-playerPos.x + w / 2,
 						  -playerPos.y + h / 2, 0);
 		new TextBubble(playerPos.add(new Vec2(playerSize * scale, playerSize * scale)),
-				"Hello, Mr. Player!".substring(0, (counter++ / 10) % 19)).draw();
+				"abcdefghijklmnopqrstuvxyz").draw();
 		
 		GL11.glPopMatrix();
 	}

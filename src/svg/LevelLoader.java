@@ -77,7 +77,7 @@ public class LevelLoader {
 				float x = Float.parseFloat(text.getAttribute("x"));
 				float y = Float.parseFloat(text.getAttribute("y"));
 				// Adjust coordinates to "flip" the level.
-				y = -1f * y + size;
+//				y = -1f * y + size;
 				Vec2 pos = new Vec2(x, y);
 				
 				level.addText(new Text(string, pos, size));				
