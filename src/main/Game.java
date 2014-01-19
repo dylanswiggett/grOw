@@ -101,10 +101,17 @@ public class Game {
 		
 		// Animation
 		
+		 // Always fall if you're going down.
 		if (playerVel.y < -0.01 * playerSize) {
 			playerSprite.setAnimation(Player.Animation.FALLING);
-		} else if(playerSprite.getAnimation() == Player.Animation.FALLING) {
+		}
+		// Land if you just stopped falling.
+		else if(playerSprite.getAnimation() == Player.Animation.FALLING) {
 			playerSprite.setAnimation(Player.Animation.LANDING);
+		}
+		// Walk if you are landing and trying to move.
+		else if (playerSprite.getAnimation() == Player.Animation.LANDING && (Keyboard.isKeyDown(Keyboard.KEY_LEFT) ^ Keyboard.isKeyDown(Keyboard.KEY_RIGHT))) {
+			playerSprite.setAnimation(Player.Animation.WALKING);
 		}
 		
 		playerSprite.step();
@@ -118,7 +125,6 @@ public class Game {
 		if (playerSize >= goalPlayerSize) {
 			playerSize = goalPlayerSize;
 			playerGrowthSpeed = 0;
-			// TODO: Stop whooshing sound
 			Sound.stop(Sound.WHOOSH);
 		} else if (playerSize < goalPlayerSize) {
 			if (playerSize > (originalPlayerSize + goalPlayerSize) / 2 && playerGrowthSpeed > GROWTH_RATE)
@@ -126,7 +132,6 @@ public class Game {
 			else
 				playerGrowthSpeed += GROWTH_RATE;
 			playerSize += playerGrowthSpeed;
-			// TODO: Scale whooshing sound relative to playerGrowthSpeed.
 			Sound.setVolume(Sound.WHOOSH, playerGrowthSpeed);
 		}
 		
@@ -151,7 +156,6 @@ public class Game {
 				goalPlayerSize += c.getValue() * GROWTH_SCALE;
 				originalPlayerSize = playerSize;
 				playerGrowthSpeed = GROWTH_RATE;
-				// TODO: Start whooshing sound
 				Sound.play(Sound.WHOOSH);
 			}
 		}
