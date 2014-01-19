@@ -52,7 +52,7 @@ public class Game {
 				new TexturedRect(playerPos, new Vec2(playerSize, playerSize), "assets/textures/player.png", 1, 1, 1);
 				
 		background =
-				new TexturedRect(new Vec2(0, 0), new Vec2(w, h), "background.png", 1, 1, 1);
+				new TexturedRect(new Vec2(0, 0), new Vec2(w, h), "assets/textures/background.png", 1, 1, 1);
 		
 		try {
 			curLvl = LevelLoader.load("another.svg");
