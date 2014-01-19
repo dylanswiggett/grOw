@@ -12,7 +12,7 @@ public class Sound {
 	
 	public static void init() {
 		try {
-			JUMP = AudioLoader.getAudio("WAV", ResourceLoader.getResourceAsStream("jump.wav"));
+			JUMP = AudioLoader.getAudio("WAV", ResourceLoader.getResourceAsStream("assets/sound/Jump.wav"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
